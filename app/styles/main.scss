@@ -1,90 +1,379 @@
-// bower:scss
-// endbower
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+// ------ fonts ------ //
+
+@mixin brand-font {
+  font-family: "museo-sans-rounded", "helvetica neue", "arial";
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+// ------ positioning ------ //
+
+@mixin inline {
+  display: inline-block;
+  float: left;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  height: auto;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+@mixin relative {
+  position: relative;
+  padding: 0;
+  margin: 0
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+@mixin zero-margin {
+  margin: 0;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+@mixin zero-padding {
+  padding: 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+@mixin float-left {
+  float: left
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+// ------ margin and padding ------ //
 
-  p + h4 {
-    margin-top: 28px;
-  }
+// ------ padding ------ //
+
+@mixin root-padding {
+  padding: 15px;
 }
 
-/* Responsive: Portrait tablets and up */
+@mixin common-padding {
+  padding: 20px;
+}
+
+@mixin large-padding {
+  padding: 35px
+}
+
+// margin //
+
+@mixin root-margin {
+  margin: 15px;
+}
+
+@mixin common-margin {
+  margin: 20px;
+}
+
+@mixin large-margin {
+  margin: 35px
+}
+
+// ------ color swatches ------ //
+
+// backgrounds //
+
+@mixin brand {
+  background: #5cb85c;
+}
+
+@mixin light {
+  background: #dedede;
+}
+
+@mixin chrome {
+  background: #d0d0d0;
+}
+
+@mixin chrome-dark {
+  background: #757575;
+}
+
+@mixin mid {
+  background: #757575;
+}
+
+@mixin dark {
+  background: #232323;
+}
+
+@mixin black {
+  background: #081f02;
+}
+
+@mixin rust {
+  background: #db473d;
+}
+
+@mixin action {
+  background: #f53b2e;
+}
+
+// colors //
+
+@mixin color-brand {
+  color: #5cb85c;
+}
+
+@mixin color-light {
+  color: #dedede;
+}
+
+@mixin color-chrome {
+  color: #d0d0d0;
+}
+
+@mixin color-chrome-dark {
+  color: #757575;
+}
+
+@mixin color-mid {
+  color: #757575;
+}
+
+@mixin color-dark {
+  color: #232323;
+}
+
+@mixin color-black {
+  color: #081f02;
+}
+
+@mixin color-rust {
+  color: #db473d;
+}
+
+@mixin color-action {
+  color: #f53b2e;
+}
+
+// ------ treatments ------ //
+
+@mixin light-text {
+  text-shadow: 1px 1px #000000;
+}
+
+@mixin dark-text {
+  text-shadow: 1px 1px #ffffff;
+}
+
+@mixin mid-text {
+  text-shadow: 1px 1px #cccccc;
+}
+
+// ------ grid heights ------ //
+
+$base-height: percentage(80/480);
+
+.line-one {
+  height: $base-height
+}
+
+.line-two {
+  height: $base-height * 2
+}
+
+.line-three {
+  height: $base-height * 3
+}
+
+.line-four {
+  height: $base-height * 4
+}
+
+.line-five {
+  height: $base-height * 5
+}
+
+.line-six {
+  height: $base-height * 6
+}
+
+// ------ grid widths ------ //
+
+$base-width: percentage(64/320);
+
+.pillar-one {
+  width: $base-width
+}
+
+.pillar-two {
+  width: $base-width * 2
+}
+
+.pillar-three {
+  width: $base-width * 3
+}
+
+.pillar-four {
+  width: $base-width * 4
+}
+
+.pillar-five {
+  width: $base-width * 5
+}
+
+// ------ *** defaults *** ------ //
+
+body, html {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "museo-sans-rounded", "helvetica neue", "arial";
+}
+
+.foundation {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  color: #fff;
+  text-shadow: 1px 1px #ffffff;
+  @include dark;
+  @include brand-font;
+}
+
+.set-border {
+  border: 1px solid #dedede;
+  border-bottom: none;
+  border-left: none;
+}
+
+// ------ *** positioning helpers *** ------ //
+
+.set-inline {
+  @include inline
+}
+
+.set-absolute {
+  @include absolute
+}
+
+.set-relative {
+  @include relative
+}
+
+.zero-margin {
+  @include zero-margin
+}
+
+.zero-padding {
+  @include zero-padding
+}
+
+.grab-left {
+  @include float-left
+}
+// ------ *** margin and padding *** ------ //
+
+// padding //
+
+.base-padding {
+  @include root-padding
+}
+
+.common-padding {
+  @include common-padding
+}
+
+.great-padding {
+  @include large-padding
+}
+
+// margin //
+
+.base-margin {
+  @include root-margin
+}
+
+.floor-margin {
+  @include common-margin
+}
+
+.great-margin {
+  @include large-margin
+}
+
+// ------ *** color swatch helpers *** ------ //
+
+// backgrounds //
+
+.set-dark {
+  @include dark
+}
+
+.treat-brand {
+  @include brand
+}
+
+.treat-light {
+  @include light
+}
+
+.treat-mid {
+  @include mid
+}
+
+.treat-chrome {
+  @include chrome
+}
+
+.treat-action {
+  @include action
+}
+
+.treat-chrome-dark {
+  @include chrome-dark
+}
+
+// colors //
+
+.font-dark {
+  @include color-dark
+}
+
+.font-brand {
+  @include color-brand
+}
+
+.font-light {
+  @include color-light
+}
+
+.font-mid {
+  @include color-mid
+}
+
+.font-chrome {
+  @include color-chrome
+}
+
+.font-action {
+  @include color-action
+}
+
+.font-chrome-dark {
+  @include color-chrome-dark
+}
+
+// ------ *** treatments *** ------ //
+
+.text-light {
+  @include light-text
+}
+
+.text-mid {
+  @include mid-text
+}
+
+.text-dark {
+  @include dark-text
+}
+
+// ------ *** responsive - tablets and up *** ------ //
+
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+    max-width: 100%;
   }
 }

@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -13,65 +13,90 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="pillarApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+</head>
+<body ng-app="pillarApp">
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+<div class="foundation line-six">
+    <section class="pillar-five line-three">
+        <div class="set-border set-inline treat-chrome pillar-three line-six">
+            <h1 class="base-padding text-mid">Group Selection</h1>
+
+            <h2 class="base-padding font-mid">The transporter is finally biological.</h2>
+            <ul class="text-mid">
+                <li>Item One</li>
+                <li>Item Two</li>
+                <li>Item Three</li>
+                <li>Item Four</li>
+            </ul>
+        </div>
+        <div class="set-inline set-border pillar-two line-six">
+            <div class="set-border treat-brand line-one">
+                <h4 class="zero-margin common-padding text-light">Sign In</h4>
+
+                <p class="common-padding text-light">
+                    Ugly understandings lead to the mystery.
+                </p>
+            </div>
+            <div class="set-border treat-dark line-five">
+                <h4 class="zero-margin common-padding text-light">Sign Up</h4>
+
+                <p class="common-padding text-light">
+                    The processor is rudely galactic.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="set-border treat-light line-two base-padding">
+        <h1 class="base-padding text-mid">Hero</h1>
+
+        <p class="base-padding font-mid">
+            The girl malfunctions mind like a photonic processor.
+        </p>
+
+        <p class="base-padding font-mid">
+            Starships reproduce with definition at the remarkable solar sphere!
+        </p>
+    </section>
+    <section class="set-border font-mid line-one base-padding">
+        <h4 class="text-light">Footer</h4>
+        <ul class="text-light">
+            <li>Footer One</li>
+            <li>Footer Two</li>
+            <li>Footer Three</li>
+            <li>Footer Four</li>
         </ul>
-        <h3 class="text-muted">pillar</h3>
-      </div>
+    </section>
+</div>
 
-      <div ng-view=""></div>
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
+<script src="//use.typekit.net/bnt1agr.js"></script>
+<script>try {
+    Typekit.load();
+} catch (e) {
+}</script>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<!-- endbuild -->
 </body>
 </html>

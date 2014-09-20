@@ -1,0 +1,195 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'qunitjs' ]
+2 info using npm@1.4.25
+3 info using node@v0.10.30
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json pillar@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'qunitjs', null ]
+8 verbose cache add name=undefined spec="qunitjs" args=["qunitjs",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'qunitjs',
+9 verbose parsed url   path: 'qunitjs',
+9 verbose parsed url   href: 'qunitjs' }
+10 silly lockFile 0e36c9d2-qunitjs qunitjs
+11 verbose lock qunitjs /Users/jrunion/.npm/0e36c9d2-qunitjs.lock
+12 silly lockFile 0e36c9d2-qunitjs qunitjs
+13 silly lockFile 0e36c9d2-qunitjs qunitjs
+14 verbose addNamed [ 'qunitjs', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile ecc01e65-qunitjs qunitjs@
+17 verbose lock qunitjs@ /Users/jrunion/.npm/ecc01e65-qunitjs.lock
+18 silly addNameRange { name: 'qunitjs', range: '*', hasData: false }
+19 verbose request where is /qunitjs
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 1bd0ad2e33d6feee
+22 verbose url raw /qunitjs
+23 verbose url resolving [ 'https://registry.npmjs.org/', './qunitjs' ]
+24 verbose url resolved https://registry.npmjs.org/qunitjs
+25 verbose request where is https://registry.npmjs.org/qunitjs
+26 info trying registry request attempt 1 at 17:08:03
+27 verbose etag "5NKV209PHM1WRMGSVXL027WRS"
+28 http GET https://registry.npmjs.org/qunitjs
+29 http 304 https://registry.npmjs.org/qunitjs
+30 silly registry.get cb [ 304,
+30 silly registry.get   { date: 'Sat, 20 Sep 2014 21:08:03 GMT',
+30 silly registry.get     server: 'Apache',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'last-modified': 'Sat, 20 Sep 2014 21:08:03 GMT',
+30 silly registry.get     'cache-control': 'max-age=60',
+30 silly registry.get     etag: '"5NKV209PHM1WRMGSVXL027WRS"',
+30 silly registry.get     'x-served-by': 'cache-iad2132-IAD',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1411247283.654704,VS0,VE11',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'content-length': '0',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 verbose etag https://registry.npmjs.org/qunitjs from cache
+32 silly addNameRange number 2 { name: 'qunitjs', range: '*', hasData: true }
+33 silly addNameRange versions [ 'qunitjs',
+33 silly addNameRange   [ '1.9.0',
+33 silly addNameRange     '1.10.0',
+33 silly addNameRange     '1.11.0',
+33 silly addNameRange     '1.12.0',
+33 silly addNameRange     '1.13.0',
+33 silly addNameRange     '1.14.0',
+33 silly addNameRange     '1.15.0',
+33 silly addNameRange     '1.12.0-pre' ] ]
+34 verbose addNamed [ 'qunitjs', '1.15.0' ]
+35 verbose addNamed [ '1.15.0', '1.15.0' ]
+36 silly lockFile b9236fe6-qunitjs-1-15-0 qunitjs@1.15.0
+37 verbose lock qunitjs@1.15.0 /Users/jrunion/.npm/b9236fe6-qunitjs-1-15-0.lock
+38 silly lockFile b9236fe6-qunitjs-1-15-0 qunitjs@1.15.0
+39 silly lockFile b9236fe6-qunitjs-1-15-0 qunitjs@1.15.0
+40 silly lockFile ecc01e65-qunitjs qunitjs@
+41 silly lockFile ecc01e65-qunitjs qunitjs@
+42 silly resolved [ { name: 'qunitjs',
+42 silly resolved     title: 'QUnit',
+42 silly resolved     description: 'An easy-to-use JavaScript Unit Testing framework.',
+42 silly resolved     version: '1.15.0',
+42 silly resolved     homepage: 'http://qunitjs.com',
+42 silly resolved     author:
+42 silly resolved      { name: 'jQuery Foundation and other contributors',
+42 silly resolved        url: 'https://github.com/jquery/qunit/blob/1.15.0/AUTHORS.txt' },
+42 silly resolved     repository: { type: 'git', url: 'git://github.com/jquery/qunit.git' },
+42 silly resolved     keywords: [ 'testing', 'unit', 'jquery' ],
+42 silly resolved     bugs: { url: 'https://github.com/jquery/qunit/issues' },
+42 silly resolved     licenses: [ [Object] ],
+42 silly resolved     files: [ 'qunit/qunit.js', 'qunit/qunit.css', 'LICENSE.txt' ],
+42 silly resolved     dependencies: {},
+42 silly resolved     devDependencies:
+42 silly resolved      { commitplease: '1.7.0',
+42 silly resolved        grunt: '0.4.2',
+42 silly resolved        'grunt-contrib-concat': '0.3.0',
+42 silly resolved        'grunt-contrib-jshint': '0.10.0',
+42 silly resolved        'grunt-contrib-watch': '0.5.3',
+42 silly resolved        'grunt-coveralls': '0.3.0',
+42 silly resolved        'grunt-git-authors': '1.2.0',
+42 silly resolved        'grunt-jscs': '0.6.1',
+42 silly resolved        'grunt-qunit-istanbul': '0.4.5',
+42 silly resolved        'load-grunt-tasks': '0.3.0',
+42 silly resolved        testswarm: '1.1.0' },
+42 silly resolved     scripts:
+42 silly resolved      { ci: 'grunt && grunt coveralls',
+42 silly resolved        test: 'grunt',
+42 silly resolved        prepublish: 'grunt build' },
+42 silly resolved     main: 'qunit/qunit.js',
+42 silly resolved     _id: 'qunitjs@1.15.0',
+42 silly resolved     _shasum: '3536a78204984dbcb82e62bcab7d8d1166485037',
+42 silly resolved     _from: 'qunitjs@',
+42 silly resolved     _npmVersion: '1.4.10',
+42 silly resolved     _npmUser: { name: 'jzaefferer', email: 'joern.zaefferer@gmail.com' },
+42 silly resolved     maintainers: [ [Object], [Object] ],
+42 silly resolved     dist:
+42 silly resolved      { shasum: '3536a78204984dbcb82e62bcab7d8d1166485037',
+42 silly resolved        tarball: 'http://registry.npmjs.org/qunitjs/-/qunitjs-1.15.0.tgz' },
+42 silly resolved     directories: {},
+42 silly resolved     _resolved: 'https://registry.npmjs.org/qunitjs/-/qunitjs-1.15.0.tgz',
+42 silly resolved     readme: 'ERROR: No README data found!' } ]
+43 info install qunitjs@1.15.0 into /Users/jrunion/pillar
+44 info installOne qunitjs@1.15.0
+45 verbose node_modules/qunitjs unbuild
+46 verbose tar unpack /Users/jrunion/.npm/qunitjs/1.15.0/package.tgz
+47 silly lockFile 5db1c849-nion-pillar-node-modules-qunitjs tar:///Users/jrunion/pillar/node_modules/qunitjs
+48 verbose lock tar:///Users/jrunion/pillar/node_modules/qunitjs /Users/jrunion/.npm/5db1c849-nion-pillar-node-modules-qunitjs.lock
+49 silly lockFile a4503b92-n-npm-qunitjs-1-15-0-package-tgz tar:///Users/jrunion/.npm/qunitjs/1.15.0/package.tgz
+50 verbose lock tar:///Users/jrunion/.npm/qunitjs/1.15.0/package.tgz /Users/jrunion/.npm/a4503b92-n-npm-qunitjs-1-15-0-package-tgz.lock
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm extractEntry README.md
+54 silly gunzTarPerm extractEntry LICENSE.txt
+55 silly gunzTarPerm extractEntry qunit/qunit.js
+56 silly gunzTarPerm extractEntry qunit/qunit.css
+57 silly lockFile 5db1c849-nion-pillar-node-modules-qunitjs tar:///Users/jrunion/pillar/node_modules/qunitjs
+58 silly lockFile 5db1c849-nion-pillar-node-modules-qunitjs tar:///Users/jrunion/pillar/node_modules/qunitjs
+59 silly lockFile a4503b92-n-npm-qunitjs-1-15-0-package-tgz tar:///Users/jrunion/.npm/qunitjs/1.15.0/package.tgz
+60 silly lockFile a4503b92-n-npm-qunitjs-1-15-0-package-tgz tar:///Users/jrunion/.npm/qunitjs/1.15.0/package.tgz
+61 info preinstall qunitjs@1.15.0
+62 verbose readDependencies using package.json deps
+63 verbose readDependencies using package.json deps
+64 silly resolved []
+65 verbose about to build /Users/jrunion/pillar/node_modules/qunitjs
+66 info build /Users/jrunion/pillar/node_modules/qunitjs
+67 verbose linkStuff [ false, false, false, '/Users/jrunion/pillar/node_modules' ]
+68 info linkStuff qunitjs@1.15.0
+69 verbose linkBins qunitjs@1.15.0
+70 verbose linkMans qunitjs@1.15.0
+71 verbose rebuildBundles qunitjs@1.15.0
+72 info install qunitjs@1.15.0
+73 info postinstall qunitjs@1.15.0
+74 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt requires async@'~0.1.22' but will load
+74 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/async,
+74 warn unmet dependency which is version 0.2.10
+75 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt requires rimraf@'~2.2.8' but will load
+75 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/rimraf,
+75 warn unmet dependency which is version 2.2.6
+76 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/glob requires minimatch@'~0.2.11' but will load
+76 warn unmet dependency undefined,
+76 warn unmet dependency which is version undefined
+77 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/grunt-legacy-util requires hooker@'~0.2.3' but will load
+77 warn unmet dependency undefined,
+77 warn unmet dependency which is version undefined
+78 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/grunt-legacy-util requires async@'~0.1.22' but will load
+78 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/async,
+78 warn unmet dependency which is version 0.2.10
+79 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/grunt-legacy-log requires hooker@'~0.2.3' but will load
+79 warn unmet dependency undefined,
+79 warn unmet dependency which is version undefined
+80 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+80 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/lodash,
+80 warn unmet dependency which is version 0.9.2
+81 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+81 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/underscore.string,
+81 warn unmet dependency which is version 2.2.1
+82 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/js-yaml/node_modules/argparse requires underscore.string@'~2.3.1' but will load
+82 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt/node_modules/underscore.string,
+82 warn unmet dependency which is version 2.2.1
+83 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/tar-fs/node_modules/tar-stream/node_modules/bl requires readable-stream@'~1.0.26' but will load
+83 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/tar-fs/node_modules/tar-stream/node_modules/readable-stream,
+83 warn unmet dependency which is version 1.1.13
+84 error peerinvalid The package karma does not satisfy its siblings' peerDependencies requirements!
+84 error peerinvalid Peer karma-chrome-launcher@0.1.4 wants karma@>=0.9.3
+84 error peerinvalid Peer karma-firefox-launcher@0.1.3 wants karma@>=0.9
+84 error peerinvalid Peer karma-jasmine@0.2.2 wants karma@>=0.9
+84 error peerinvalid Peer karma-script-launcher@0.1.0 wants karma@>=0.9
+84 error peerinvalid Peer karma-coffee-preprocessor@0.2.1 wants karma@>=0.11.14
+84 error peerinvalid Peer karma-phantomjs-launcher@0.1.4 wants karma@>=0.9
+84 error peerinvalid Peer karma-html2js-preprocessor@0.1.0 wants karma@>=0.9
+84 error peerinvalid Peer karma-requirejs@0.2.2 wants karma@>=0.9
+85 error System Darwin 13.3.0
+86 error command "node" "/usr/local/bin/npm" "install" "qunitjs"
+87 error cwd /Users/jrunion/pillar
+88 error node -v v0.10.30
+89 error npm -v 1.4.25
+90 error code EPEERINVALID
+91 verbose exit [ 1, true ]
