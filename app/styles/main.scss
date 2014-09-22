@@ -6,11 +6,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
 }
 
-// ------ positioning ------ //
+// ***** ------ positioning ------ **** //
 
 @mixin inline {
-  display: inline-block;
+  display: block;
   float: left;
+  margin: 0;
+  padding: 0
 }
 
 @mixin absolute {
@@ -39,9 +41,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   float: left
 }
 
-// ------ margin and padding ------ //
+// ***** ------ margin and padding ------ **** //
 
-// ------ padding ------ //
+// ***** ------padding ------ **** //
 
 @mixin root-padding {
   padding: 15px;
@@ -69,7 +71,21 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 35px
 }
 
-// ------ color swatches ------ //
+@mixin gutter-dark {
+  box-sizing: border-box;
+  width: 95%;
+  margin-left: 5%;
+  background-color: #232323
+}
+
+@mixin gutter-brand {
+  box-sizing: border-box;
+  width: 95%;
+  margin-left: 5%;
+  background-color: #5cb85c
+}
+
+// ***** ------ color swatches ------ **** //
 
 // backgrounds //
 
@@ -147,21 +163,21 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   color: #f53b2e;
 }
 
-// ------ treatments ------ //
+// ***** ------ treatments ------ **** //
 
 @mixin light-text {
-  text-shadow: 1px 1px #000000;
+  text-shadow: 0.5px 0.5px #000000;
 }
 
 @mixin dark-text {
-  text-shadow: 1px 1px #ffffff;
+  text-shadow: 0.5px 0.5px #ffffff;
 }
 
 @mixin mid-text {
-  text-shadow: 1px 1px #cccccc;
+  text-shadow: 0.5px 0.5px #cccccc;
 }
 
-// ------ grid heights ------ //
+// ***** ------ grid heights ------ **** //
 
 $base-height: percentage(80/480);
 
@@ -189,7 +205,7 @@ $base-height: percentage(80/480);
   height: $base-height * 6
 }
 
-// ------ grid widths ------ //
+// ***** ------ grid widths ------ **** //
 
 $base-width: percentage(64/320);
 
@@ -219,10 +235,41 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
+}
+
+h1 {
+  font-size: 2.55em
+}
+
+h2 {
+  font-size: 1.85em
+}
+
+h3 {
+  font-size: 1.35em
+}
+
+h4 {
+  font-size: 1.15em
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  line-height: 1.35em;
+}
+
+a {
+  @include color-brand;
+  text-decoration: none;
+  &:hover {
+    @include color-rust;
+  }
 }
 
 .foundation {
@@ -230,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 0;
   margin: 0;
   color: #fff;
-  text-shadow: 1px 1px #ffffff;
+  @include dark-text;
   @include dark;
   @include brand-font;
 }
@@ -297,6 +344,15 @@ h1, h2, h3, h4, h5, h6 {
   @include large-margin
 }
 
+// gutters //
+
+.gutter-dark {
+  @include gutter-dark
+}
+
+.gutter-brand {
+  @include gutter-brand
+}
 // ------ *** color swatch helpers *** ------ //
 
 // backgrounds //
