@@ -252,6 +252,14 @@ $base-width: percentage(64/320);
   width: $base-width * 5
 }
 
+.width-max {
+  width: 100%
+}
+
+.height-max {
+  height: 100%
+}
+
 // ------ *** defaults *** ------ //
 
 body, html {
@@ -296,9 +304,8 @@ a {
 }
 
 .foundation {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
+  height: 100%;
+  width: 100%;
   color: #fff;
   @include dark-text;
   @include dark;
