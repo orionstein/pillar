@@ -41,6 +41,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   float: left
 }
 
+@mixin break-float {
+  float: none;
+  clear: both;
+}
+
 // ***** ------ margin and padding ------ **** //
 
 // ***** ------padding ------ **** //
@@ -73,7 +78,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin gutter {
   box-sizing: border-box;
-  width: 95%;
+  width: 90%;
   margin: 0 0 0 5%;
   padding-top: 20px;
 }
@@ -81,16 +86,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // ***** ------ forms ------ **** //
 
 @mixin field {
-  margin: 2%;
-  padding: 20px 0 0 0;
+  margin: 2% 5%;
+  padding: 0px 0 20px 0px;
   background-color: #cccccc;
   border: 1px solid #C3C3C3;
   border-radius: 6px;
-  box-sizing: border-box;  
+  overflow: visible;
+  box-sizing: border-box;
+  float: left;
+  width: 90%;
+  &.brand {
+    background-color: #5cb85c;
+    border: 1px solid transparent;
+  }
 }
 
 @mixin text-box {
-  width: 75%;
+  width: 55%;
   height: 25px;
   padding: 2px 8px;
   margin: 0 2% 2%;
@@ -99,13 +111,40 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   border: 1px solid #FFFFFF;  
   background-color: #e0e0e0;
   background-image: -webkit-linear-gradient(top, #e0e0e0, #f5f5f5); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-  background-image:         linear-gradient(to bottom, #e0e0e0, #f5f5f5); /* Chrome 26, Firefox 16+, IE 10+, Opera */  
+  background-image: linear-gradient(to bottom, #e0e0e0, #f5f5f5); /* Chrome 26, Firefox 16+, IE 10+, Opera */  
+  float: left;
+  clear: both;
+  &.small-field {
+    width: 20%;
+  }
+  &.large-field {
+    width:75%
+  }
 }
 
 @mixin form-label {
   color: #000;
-  margin-left: 3%;
+  margin: 2% 0 1% 2%;
   font-weight: 600;
+  float: left;
+  clear: both;
+  &.sign-in {
+  color: #ffffff;
+  text-shadow: 0.5px 0.5px #4F4F4F;
+  }
+}
+
+@mixin core {
+  padding: 0.45em 15px;
+  border: 1px solid #ffffff;
+  color: #272727;
+  text-shadow: 0.5px 0.5px #F5F5F5;
+  background-image: linear-gradient(to bottom, #CCCCCC, #f5f5f5);
+  background-image: -webkit-linear-gradient(top, #CCCCCC, #f5f5f5); /* Chrome 10-25, iOS 5+, Safari 5.1+ */  
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 // ***** ------ color swatches ------ **** //
@@ -291,8 +330,8 @@ h4 {
 
 ul {
   list-style: none;
-  margin: 0;
-  line-height: 1.35em;
+  margin: 20px 0 0 1%;
+  line-height: 1.75em;
 }
 
 a {
@@ -301,6 +340,10 @@ a {
   &:hover {
     @include color-rust;
   }
+}
+
+.core {
+  @include core
 }
 
 .foundation {
@@ -354,6 +397,10 @@ a {
 
 .grab-left {
   @include float-left
+}
+
+.break-float {
+  @include break-float
 }
 
 // ------ *** margin and padding *** ------ //
@@ -452,6 +499,10 @@ a {
 
 .font-chrome-dark {
   @include color-chrome-dark
+}
+
+.font-rust {
+  @include color-rust
 }
 
 // ------ *** treatments *** ------ //
