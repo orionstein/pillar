@@ -1,25 +1,24 @@
-<!doctype html>
-<html class="no-js">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-</head>
-<body ng-app="pillarApp">
 
-    <div class="foundation">
-        <section class="line-three width-max">
-            <div class="pillar-three height-max set-inline treat-chrome">
-                <h1 class="gutter text-mid">Group Selection</h1>
+<style>
+
+
+
+
+
+
+
+</style>
+
+<link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+<div class="foundation">
+        <section class="pillar-three">
+            <div class="line-three treat-chrome">
+            	<h1 class="gutter text-mid">Group Selection</h1>
 
                 <h2 class="gutter font-mid">Form</h2>
 
@@ -38,27 +37,29 @@
                     </div>
                 </form>
             </div>
-            <div class="pillar-two set-inline height-max">
-                <div class="line-two treat-brand">
-                    <h3 class="text-light gutter">Sign In</h3>
+
+        </section>
+        <section class="pillar-two">
+            <div class="line-one treat-brand">
+            	<h3 class="text-light gutter">Sign In</h3>
                     <form class="gutter">
                         <label class="break-float form-label sign-in">Username</label>
                         <input class="break-float text-box small-field" type="text" placeholder="username"></input>
                         <label class="break-float form-label sign-in">Password</label>
                         <input class="break-float text-box small-field" type="text" placeholder="passsword"></input>  
                         <button class="core">Sign In</button>                      
-                    </form>                    
-                </div>
-                <div class="line-four treat-dark">
-                    <h3 class="text-light gutter">Sign Up</h3>
+                    </form>   
+            </div>
+            <div class="line-two treat-dark">
+            	<h3 class="text-light gutter">Sign Up</h3>
                     <p class="gutter text-light font-mid">
                         Responsive grids that use gutters proportional to the screen can make the content feel like it's being squeezed together or pulled apart as the screen width changes. With elastic gutters this just doesn't happen, as the gutters always stay in proportion to the content.
-                    </p>                                                          
-                </div>
+                    </p> 
             </div>
         </section>
-        <section class="line-three treat-light">
-            <h1 class="gutter text-mid">Hero</h1>
+        <section class="pillar-five treat-light">
+            <div class="line-three">
+                <h1 class="gutter text-mid">Hero</h1>
             <p class="gutter text-mid">
                 Responsive layouts often require you to change the font-size at certain screen widths, for example to make the text easier to read on huge monitors, or to make the text fit better onto narrow mobile screens. This can make the proportions of your layout feel off, especially if you're using a baseline grid. GGS's zoomable baseline grid gets around this problem.
             </p>
@@ -68,38 +69,9 @@
                 <li>Item Three</li>
                 <li><strong>Item Four</strong></li>
             </ul>
+            </div>
         </section>
-    </div>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
-<!--[if lt IE 9]>
-<script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.js"></script>
-<![endif]-->
-<!-- endbuild -->
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-
-<script src="//use.typekit.net/bnt1agr.js"></script>
-<script>try {
-    Typekit.load();
-} catch (e) {
-}</script>
-
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/about.js"></script>
-<!-- endbuild -->
+</div>
 </body>
 </html>

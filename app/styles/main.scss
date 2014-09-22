@@ -355,6 +355,11 @@ a {
   @include brand-font;
 }
 
+section{
+    float:left;
+    overflow:hidden;
+}
+
 .field {
   @include field
 }
