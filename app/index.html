@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js">
+<!doctype xhtml>
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <title></title>
@@ -15,50 +15,53 @@
     <!-- endbuild -->
 </head>
 <body ng-app="pillarApp">
-
-    <div class="foundation">
-        <section class="line-three width-max">
-            <div class="pillar-three height-max set-inline treat-chrome">
-                <h1 class="gutter text-mid">Group Selection</h1>
+<div class="foundation">
+        <section class="pillar-three">
+        	
+            <div class="line-three treat-chrome bkimg">
+            	<h1 class="gutter text-mid">Group Selection</h1>
 
                 <h2 class="gutter font-mid">Form</h2>
 
                 <form class="field">
                     <label class="form-label font-rust">Text Label</label>
                     <input class="text-box" type="text" placeholder="I am a text box"></input>
+                    <br />
                     <label class="form-label font-rust">Select Label</label>
                     <select class="text-box" type="select" placeholder="Select Me">
                         <option>Option One</option>
                         <option>Option One</option>
                         <option>Option One</option>
                     </select>
-                    <div class="break-float base-padding">
+                    <div>
                         <button class="grab-left core">Submit</button>
                         <button class="grab-left core">Reset</button>
                     </div>
                 </form>
             </div>
-            <div class="pillar-two set-inline height-max">
-                <div class="line-two treat-brand">
-                    <h3 class="text-light gutter">Sign In</h3>
+
+        </section>
+        <section class="pillar-two">
+            <div class="line-one treat-brand">
+            	<h3 class="text-light gutter">Sign In</h3>
                     <form class="gutter">
-                        <label class="break-float form-label sign-in">Username</label>
-                        <input class="break-float text-box small-field" type="text" placeholder="username"></input>
-                        <label class="break-float form-label sign-in">Password</label>
-                        <input class="break-float text-box small-field" type="text" placeholder="passsword"></input>  
+                        <label class="form-label sign-in">Username</label>
+                        <input class="text-box small-field" type="text" placeholder="username"></input>
+                        <label class="form-label sign-in">Password</label>
+                        <input class="text-box small-field" type="text" placeholder="passsword"></input>  
                         <button class="core">Sign In</button>                      
-                    </form>                    
-                </div>
-                <div class="line-four treat-dark">
-                    <h3 class="text-light gutter">Sign Up</h3>
+                    </form>   
+            </div>
+            <div class="line-two treat-dark">
+            	<h3 class="text-light gutter">Sign Up</h3>
                     <p class="gutter text-light font-mid">
                         Responsive grids that use gutters proportional to the screen can make the content feel like it's being squeezed together or pulled apart as the screen width changes. With elastic gutters this just doesn't happen, as the gutters always stay in proportion to the content.
-                    </p>                                                          
-                </div>
+                    </p> 
             </div>
         </section>
-        <section class="line-three treat-light">
-            <h1 class="gutter text-mid">Hero</h1>
+        <section class="pillar-five treat-light">
+            <div class="line-three">
+                <h1 class="gutter text-mid">Hero</h1>
             <p class="gutter text-mid">
                 Responsive layouts often require you to change the font-size at certain screen widths, for example to make the text easier to read on huge monitors, or to make the text fit better onto narrow mobile screens. This can make the proportions of your layout feel off, especially if you're using a baseline grid. GGS's zoomable baseline grid gets around this problem.
             </p>
@@ -68,10 +71,12 @@
                 <li>Item Three</li>
                 <li><strong>Item Four</strong></li>
             </ul>
+            </div>
         </section>
-    </div>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+</div>
+
+<!-- build:js(.) scripts/oldieshim.js -->
 <!--[if lt IE 9]>
 <script src="bower_components/es5-shim/es5-shim.js"></script>
 <script src="bower_components/json3/lib/json3.js"></script>
@@ -101,5 +106,6 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <!-- endbuild -->
+
 </body>
 </html>

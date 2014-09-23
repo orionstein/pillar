@@ -42,7 +42,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 @mixin break-float {
-  float: none;
+  
   clear: both;
 }
 
@@ -80,14 +80,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   box-sizing: border-box;
   width: 90%;
   margin: 0 0 0 5%;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 // ***** ------ forms ------ **** //
 
 @mixin field {
-  margin: 2% 5%;
-  padding: 0px 0 20px 0px;
+  margin: 0 5%;
+  padding: 20px 0 20px 2%;
   background-color: #cccccc;
   border: 1px solid #C3C3C3;
   border-radius: 6px;
@@ -101,19 +101,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   }
 }
 
+.bkimg{
+background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");
+background-repeat: no-repeat;
+background-size: 300% auto;
+background-position: 33% 20%;
+}
+
 @mixin text-box {
   width: 55%;
   height: 25px;
   padding: 2px 8px;
-  margin: 0 2% 2%;
+  margin: 0 0 2%;
   font-size: 13px;
   border-radius: 4px;
   border: 1px solid #FFFFFF;  
   background-color: #e0e0e0;
   background-image: -webkit-linear-gradient(top, #e0e0e0, #f5f5f5); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
   background-image: linear-gradient(to bottom, #e0e0e0, #f5f5f5); /* Chrome 26, Firefox 16+, IE 10+, Opera */  
-  float: left;
-  clear: both;
   &.small-field {
     width: 20%;
   }
@@ -124,10 +129,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin form-label {
   color: #000;
-  margin: 2% 0 1% 2%;
+  margin: 2% 1% 1%;
   font-weight: 600;
-  float: left;
-  clear: both;
   &.sign-in {
   color: #ffffff;
   text-shadow: 0.5px 0.5px #4F4F4F;
@@ -355,6 +358,11 @@ a {
   @include brand-font;
 }
 
+section{
+    float:left;
+    overflow:hidden;
+}
+
 .field {
   @include field
 }
@@ -521,7 +529,8 @@ a {
 
 // ------ *** responsive - tablets and up *** ------ //
 
-@media screen and (min-width: 768px) {
+
+@media screen and (max-width: 320px) {
   .container {
     max-width: 100%;
   }
