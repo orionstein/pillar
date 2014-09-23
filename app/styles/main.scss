@@ -80,7 +80,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   box-sizing: border-box;
   width: 90%;
   margin: 0 0 0 5%;
-  padding-top: 10px;
+  padding-top: 5%;
+
 }
 
 // ***** ------ forms ------ **** //
@@ -99,13 +100,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     background-color: #5cb85c;
     border: 1px solid transparent;
   }
-}
-
-.bkimg{
-background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");
-background-repeat: no-repeat;
-background-size: 300% auto;
-background-position: 33% 20%;
 }
 
 @mixin text-box {
@@ -159,35 +153,42 @@ background-position: 33% 20%;
 }
 
 @mixin light {
-  background: #dedede;
+  background-color: #dedede;
 }
 
 @mixin chrome {
-  background: #d0d0d0;
+  background-color: #d0d0d0;
 }
 
 @mixin chrome-dark {
-  background: #757575;
+  background-color: #757575;
 }
 
 @mixin mid {
-  background: #757575;
+  background-color: #757575;
 }
 
 @mixin dark {
-  background: #232323;
+  background-color: #232323;
 }
 
 @mixin black {
-  background: #081f02;
+  background-color: #081f02;
 }
 
 @mixin rust {
-  background: #db473d;
+  background-color: #db473d;
 }
 
 @mixin action {
-  background: #f53b2e;
+  background-color: #f53b2e;
+}
+
+@mixin core-image {
+  background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% auto;
+  background-position: 33% 20%;  
 }
 
 // colors //
@@ -226,6 +227,10 @@ background-position: 33% 20%;
 
 @mixin color-action {
   color: #f53b2e;
+}
+
+@mixin color-base {
+  color: #ffffff;
 }
 
 // ***** ------ treatments ------ **** //
@@ -308,6 +313,8 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 15px;
+  line-height: 1.65em;
   overflow: hidden
 }
 
@@ -356,11 +363,39 @@ a {
   @include dark-text;
   @include dark;
   @include brand-font;
-}
-
-section{
+  section {
     float:left;
     overflow:hidden;
+    &.boundary {
+      @include chrome;
+      p {
+        font-size: 1em;
+      }
+    }
+    &.identification {
+      @include core-image;
+    }
+    &.user {
+      .in {
+        @include brand
+      } 
+      .up {
+        @include mid;
+        @include color-base;
+        @include light-text;
+      }             
+    }   
+    &.hero {
+      @include dark;
+    }   
+    &.footer {
+      @include light;
+    }                     
+  }
+}
+
+form.pillar-four.line-three {
+  @include chrome
 }
 
 .field {
@@ -527,6 +562,12 @@ section{
   @include dark-text
 }
 
+.bkimg{
+/*  background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");*/
+  background-repeat: no-repeat;
+  background-size: 300% auto;
+  background-position: 33% 20%;
+}
 // ------ *** responsive - tablets and up *** ------ //
 
 
