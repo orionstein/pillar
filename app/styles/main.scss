@@ -1,12 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-// ------ fonts ------ //
+// ------ *** *** ------ SASS Mixins  ------ *** *** ------ //
+
+// ------ fonts ------ **** //
 
 @mixin brand-font {
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
 }
 
-// ***** ------ positioning ------ **** //
+// ------ positioning ------ **** //
 
 @mixin inline {
   display: block;
@@ -41,14 +43,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   float: left
 }
 
-@mixin break-float {
-  
+@mixin break-float {  
   clear: both;
 }
 
 // ***** ------ margin and padding ------ **** //
 
-// ***** ------padding ------ **** //
+// padding ------ **** //
 
 @mixin root-padding {
   padding: 15px;
@@ -85,7 +86,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   width: 90%;
   margin: 0 0 0 5%;
   padding-top: 5%;
-
 }
 
 // ***** ------ forms ------ **** //
@@ -94,10 +94,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 3% 5%;
   padding: 2%;
   border-radius: 6px;
-  overflow: visible;
-  box-sizing: border-box;
-  float: left;
-  width: 90%;  
+  box-sizing: border-box; 
   &.brand {
     background-color: #5cb85c;
     border: 1px solid transparent;
@@ -113,8 +110,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   border-radius: 4px;
   border: 1px solid #FFFFFF;  
   background-color: #e0e0e0;
-  background-image: -webkit-linear-gradient(top, #e0e0e0, #f5f5f5); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-  background-image: linear-gradient(to bottom, #e0e0e0, #f5f5f5); /* Chrome 26, Firefox 16+, IE 10+, Opera */  
+  background-image: -webkit-linear-gradient(top, #e0e0e0, #f5f5f5); 
+  background-image: linear-gradient(to bottom, #e0e0e0, #f5f5f5);  
   &.small-field {
     width: 20%;
   }
@@ -138,7 +135,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   color: #272727;
   text-shadow: 0.5px 0.5px #F5F5F5;
   background-image: linear-gradient(to bottom, #CCCCCC, #f5f5f5);
-  background-image: -webkit-linear-gradient(top, #CCCCCC, #f5f5f5); /* Chrome 10-25, iOS 5+, Safari 5.1+ */  
+  background-image: -webkit-linear-gradient(top, #CCCCCC, #f5f5f5); 
   border-radius: 2px;
   font-size: 13px;
   font-weight: 600;
@@ -147,15 +144,42 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 // ***** ------ color swatches ------ **** //
 
-// backgrounds //
+// backgrounds *** ------ //
+
+$color-dark: #232323;
+$color-light: #dedede;
+$color-brand: #5cb85c;
+
+@mixin color-hover($color){
+  &:hover{
+    background-color: darken($color , 20%);
+  }
+}
+
+@mixin color-def($color){
+  background-color: $color;
+  @include color-hover($color);
+}
+
+@mixin dark {  
+  @include color-def($color-dark);
+}
+
+@mixin mid {
+  @include color-def(#757575);
+}
 
 @mixin brand {
-  background: #5cb85c;
+  @include color-def($color-brand);
 }
 
 @mixin light {
-  background-color: #dedede;
+  @include color-def($color-light);
 }
+
+/*@mixin brand {
+  background-color: #5cb85c;
+}*/
 
 @mixin chrome {
   background-color: #d0d0d0;
@@ -163,14 +187,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin chrome-dark {
   background-color: #757575;
-}
-
-@mixin mid {
-  background-color: #757575;
-}
-
-@mixin dark {
-  background-color: #232323;
 }
 
 @mixin black {
@@ -192,7 +208,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   background-position: 33% 20%;  
 }
 
-// colors //
+// colors *** ------ //
 
 @mixin color-brand {
   color: #5cb85c;
@@ -308,7 +324,7 @@ $base-width: percentage(64/320);
   height: 100%
 }
 
-// ------ *** defaults *** ------ //
+// ------ *** *** ------ Defaults ------ *** *** ------ //
 
 body, html {
   height: 100%;
@@ -377,6 +393,7 @@ a {
       }
       form.pillar-four.line-two {
         @include dark;
+        @include field;
         button {
           @include btn-padding;
         }
@@ -407,10 +424,10 @@ a {
     }                     
   }
 }
-
+/*
 .field {
   @include field
-}
+}*/
 
 .text-box {
   @include text-box
@@ -420,40 +437,10 @@ a {
   @include form-label
 }
 
-.set-border {
-  border: 1px solid #dedede;
-  border-bottom: none;
-  border-left: none;
-}
-
 // ------ *** positioning helpers *** ------ //
-
-.set-inline {
-  @include inline
-}
-
-.set-absolute {
-  @include absolute
-}
-
-.set-relative {
-  @include relative
-}
-
-.zero-margin {
-  @include zero-margin
-}
-
-.zero-padding {
-  @include zero-padding
-}
 
 .grab-left {
   @include float-left
-}
-
-.break-float {
-  @include break-float
 }
 
 // ------ *** margin and padding *** ------ //
@@ -496,7 +483,7 @@ a {
 
 // backgrounds //
 
-.set-dark {
+.treat-dark {
   @include dark
 }
 
@@ -524,7 +511,7 @@ a {
   @include chrome-dark
 }
 
-// colors //
+// ------ *** colors *** ------ //
 
 .font-dark {
   @include color-dark
@@ -572,14 +559,7 @@ a {
   @include dark-text
 }
 
-.bkimg{
-/*  background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");*/
-  background-repeat: no-repeat;
-  background-size: 300% auto;
-  background-position: 33% 20%;
-}
 // ------ *** responsive - tablets and up *** ------ //
-
 
 @media screen and (max-width: 320px) {
   .container {
