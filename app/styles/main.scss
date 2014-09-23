@@ -1,14 +1,18 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-// ------ *** *** ------ SASS Mixins  ------ *** *** ------ //
 
-// ------ fonts ------ **** //
+// ---------------------------------------------------------//
+// ------ *** *** ------ [ MIXINS ] ------ *** *** ------ //
+// ---------------------------------------------------------//
+
+
+// ------ FONTS ------ **** //
 
 @mixin brand-font {
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
 }
 
-// ------ positioning ------ **** //
+// ------ POSITIONING ------ **** //
 
 @mixin inline {
   display: block;
@@ -47,9 +51,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   clear: both;
 }
 
-// ***** ------ margin and padding ------ **** //
+// ***** ------ MARGINS AND PADDING ------ **** //
 
-// padding ------ **** //
+// PADDING ------ **** //
 
 @mixin root-padding {
   padding: 15px;
@@ -88,7 +92,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding-top: 5%;
 }
 
-// ***** ------ forms ------ **** //
+// ***** ------ FORMS ------ **** //
 
 @mixin field {
   margin: 3% 5%;
@@ -142,9 +146,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   cursor: pointer;
 }
 
-// ***** ------ color swatches ------ **** //
+// ***** ------ COLOR SWATCHES ------ **** //
 
-// backgrounds *** ------ //
+// BACKGROUND *** ------ //
 
 $color-dark: #232323;
 $color-light: #dedede;
@@ -177,10 +181,6 @@ $color-brand: #5cb85c;
   @include color-def($color-light);
 }
 
-/*@mixin brand {
-  background-color: #5cb85c;
-}*/
-
 @mixin chrome {
   background-color: #d0d0d0;
 }
@@ -208,7 +208,7 @@ $color-brand: #5cb85c;
   background-position: 33% 20%;  
 }
 
-// colors *** ------ //
+// COLORS *** ------ //
 
 @mixin color-brand {
   color: #5cb85c;
@@ -250,7 +250,7 @@ $color-brand: #5cb85c;
   color: #ffffff;
 }
 
-// ***** ------ treatments ------ **** //
+// ***** ------ TREATMENTS ------ **** //
 
 @mixin light-text {
   text-shadow: 0.5px 0.5px #000000;
@@ -264,7 +264,7 @@ $color-brand: #5cb85c;
   text-shadow: 0.5px 0.5px #cccccc;
 }
 
-// ***** ------ grid heights ------ **** //
+// ***** ------ GRID HEIGHTS ------ **** //
 
 $base-height: percentage(80/480);
 
@@ -292,7 +292,7 @@ $base-height: percentage(80/480);
   height: $base-height * 6
 }
 
-// ***** ------ grid widths ------ **** //
+// ***** ------ GRID WIDTHS ------ **** //
 
 $base-width: percentage(64/320);
 
@@ -324,7 +324,11 @@ $base-width: percentage(64/320);
   height: 100%
 }
 
-// ------ *** *** ------ Defaults ------ *** *** ------ //
+
+// ---------------------------------------------------------//
+// ------ *** *** ------ [ Defaults ] ------ *** *** ------ //
+// ---------------------------------------------------------//
+
 
 body, html {
   height: 100%;
@@ -424,11 +428,6 @@ a {
     }                     
   }
 }
-/*
-.field {
-  @include field
-}*/
-
 .text-box {
   @include text-box
 }
