@@ -54,6 +54,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 15px;
 }
 
+@mixin btn-padding {
+  padding: 5px 15px;
+}
+
 @mixin common-padding {
   padding: 20px;
 }
@@ -76,7 +80,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 35px
 }
 
-@mixin gutter {
+@mixin curb {
   box-sizing: border-box;
   width: 90%;
   margin: 0 0 0 5%;
@@ -87,15 +91,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // ***** ------ forms ------ **** //
 
 @mixin field {
-  margin: 0 5%;
-  padding: 20px 0 20px 2%;
-  background-color: #cccccc;
-  border: 1px solid #C3C3C3;
+  margin: 3% 5%;
+  padding: 2%;
   border-radius: 6px;
   overflow: visible;
   box-sizing: border-box;
   float: left;
-  width: 90%;
+  width: 90%;  
   &.brand {
     background-color: #5cb85c;
     border: 1px solid transparent;
@@ -132,7 +134,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 @mixin core {
-  padding: 0.45em 15px;
   border: 1px solid #ffffff;
   color: #272727;
   text-shadow: 0.5px 0.5px #F5F5F5;
@@ -371,13 +372,24 @@ a {
       p {
         font-size: 1em;
       }
+      h1, h2 {
+        @include light-text;
+      }
+      form.pillar-four.line-two {
+        @include dark;
+        button {
+          @include btn-padding;
+        }
+      }      
     }
     &.identification {
       @include core-image;
     }
     &.user {
       .in {
-        @include brand
+        @include brand;
+        @include color-base;
+        @include light-text;        
       } 
       .up {
         @include mid;
@@ -387,15 +399,13 @@ a {
     }   
     &.hero {
       @include dark;
+      @include color-base;
+      @include light-text;      
     }   
     &.footer {
       @include light;
     }                     
   }
-}
-
-form.pillar-four.line-three {
-  @include chrome
 }
 
 .field {
@@ -478,8 +488,8 @@ form.pillar-four.line-three {
 
 // ------ *** gutters *** ------ //
 
-.gutter {
-  @include gutter
+.curb {
+  @include curb
 }
 
 // ------ *** color swatch helpers *** ------ //
