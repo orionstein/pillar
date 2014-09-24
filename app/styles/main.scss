@@ -2,35 +2,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import url('mixins.scss');
 
-// --------------------------------------------- //
-// ---- [ TOC ] ------------------------------- //
-// ------------------------------------------- //
-// ************************************* //
-// **** [ FONT MIXINS ] *************** //
-// **** [ POSITION MIXINS ] ********** //
-// **** [ PADDING MIXINS ] ********** //
-// **** [ FORM MIXINS ] ************ //
-// **** [ BACKGROUND MIXINS ] ***** //
-// **** [ COLOR MIXINS ] ********* //
-// **** [ TREATMENT MIXINS ] **** //
-// **** [ HEIGHT MIXINS ] ****** //
-// **** [ WIDTH MIXINS ] ****** //
-// *************************** //
-// ---------------- //
-// ---- [ END ] -- //
-// -------------- //
 
+// *** ------ [ FONT MIXINS ] ------ *** //
 
-
-// ************************************************************************ //
-// ***** ------ [ FONT MIXINS ] ------ *********************** //
-// ********************************************************** //
 
 @mixin brand-font { font-family: "museo-sans-rounded", "helvetica neue", "arial" }
 
-// ************************************************************************ //
-// ***** ------ [ POSITION MIXINS ] ------ ******************* //
-// ********************************************************** //
+
+// *** ------[ POSITION MIXINS ] ------ *** //
+
 
 @mixin inline {
   display: block;
@@ -58,9 +38,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @mixin float-left { float: left }
 @mixin break-float { clear: both }  
 
-// ************************************************************************ //
-// ***** ------ [ PADDING MIXINS ] ------ ******************** //
-// ********************************************************** //
+
+// *** ------ [ PADDING MIXINS ] ------ *** //
+
 
 @mixin root-padding { padding: 15px }
 @mixin btn-padding { padding: 5px 15px }
@@ -88,9 +68,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding-top: 5%;
 }
 
-// ************************************************************************ //
-// ***** ------ [ FORM MIXINS ] ------ *********************** //
-// ********************************************************** //
+
+// ***** ------ [ FORM MIXINS ] ------ *** //
+
 
 @mixin field {
   margin: 3% 5%;
@@ -144,13 +124,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   cursor: pointer;
 }
 
-// ************************************************************************ //
-// ***** ------ [ BACKGROUND MIXINS ] ------ ***************** //
-// ********************************************************** //
 
-// **************************** //
-// **** [ SWATCH COLORS ] **** //
-// ************************** //
+// ***** ------ [ BACKGROUND MIXINS ] ------ *** //
+
+
+
+// **** [ SWATCH COLORS ] ------ *** //
+
 
 $color-dark: #232323;
 $color-light: #dedede;
@@ -186,37 +166,16 @@ $color-brand: #5cb85c;
   background-position: 33% 20%;  
 }
 
-// ************************************************************************ //
-// ***** ------ [ COLOR MIXINS ] ------ ********************** //
-// ********************************************************** //
 
-@mixin color-brand {
-  color: #5cb85c;
-}
+// ***** ------ [ COLOR MIXINS ] ------ *** //
 
-@mixin color-light {
-  color: #dedede;
-}
-
-@mixin color-chrome {
-  color: #d0d0d0;
-}
-
-@mixin color-chrome-dark {
-  color: #757575;
-}
-
-@mixin color-mid {
-  color: #757575;
-}
-
-@mixin color-dark {
-  color: #232323;
-}
-
-@mixin color-black {
-  color: #081f02;
-}
+@mixin color-brand { color: #5cb85c }
+@mixin color-light { color: #dedede }
+@mixin color-chrome { color: #d0d0d0 }
+@mixin color-chrome-dark { color: #757575 }
+@mixin color-mid { color: #757575 }
+@mixin color-dark { color: #232323 }
+@mixin color-black { color: #081f02 }
 
 @mixin color-rust {
   color: #db473d;
@@ -230,9 +189,9 @@ $color-brand: #5cb85c;
   color: #ffffff;
 }
 
-// ************************************************************************ //
-// ***** ------ [ TREATMENT MIXINS ] ------ ****************** //
-// ********************************************************** //
+
+// ***** ------ [ TREATMENT MIXINS ] ------ *** //
+
 
 @mixin light-text { text-shadow: 0.5px 0.5px #000000; }
 @mixin dark-text { text-shadow: 0.5px 0.5px #ffffff; }
@@ -260,9 +219,9 @@ $color-brand: #5cb85c;
   height: 0;
 }
 
-// ************************************************************************ //
-// ***** ------ [ HEIGHT MIXINS ] ------ ********************* //
-// ********************************************************** //
+
+// ***** ------ [ HEIGHT MIXINS ] ------ *** //
+
 
 $base-height: percentage(80/480);
 
@@ -273,9 +232,9 @@ $base-height: percentage(80/480);
 .line-five { height: $base-height * 5 }
 .line-six { height: $base-height * 6 }
 
-// ************************************************************************ //
-// ***** ------ [ WIDTH MIXINS ] ------ ********************** //
-// ********************************************************** //
+
+// ***** ------ [ WIDTH MIXINS ]------ *** //
+
 
 $base-width: percentage(64/320);
 
@@ -286,9 +245,7 @@ $base-width: percentage(64/320);
 .pillar-five { width: $base-width * 5 }
 
 // ************************************************************************ //
-// ************************************************************************ //
 // ******  [ DEFAULT SELECTORS ]  *******************  //
-// ************************************************** //
 // ************************************************* //
 
 
@@ -375,7 +332,7 @@ a {
         @include color-base;
         @include light-text;
         &:hover {
-          @include flip;
+          /*@include flip;*/
         }              
       } 
       .up {
@@ -383,7 +340,7 @@ a {
         @include color-base;
         @include light-text;
         &:hover {
-          @include flip;
+          /*@include flip;*/
         }        
       }             
     }   
@@ -399,9 +356,7 @@ a {
 }
 
 
-//  ******************************* // 
-//  ---- [ HELPERS ] ---- //
-//  ******************** //
+// *** ---- [ HELPERS ] ---- *** /
 
 
 .grab-left { @include float-left }
@@ -409,9 +364,7 @@ a {
 .core { @include core }
 
 
-//  ******************************* // 
-//  ---- [ PADDING ] ---- //
-//  ******************** //
+// *** ----[ PADDING ] ---- *** /
 
 
 .base-padding { @include root-padding }
@@ -419,9 +372,7 @@ a {
 .great-padding { @include large-padding }
 
 
-//  ******************************* // 
-//  ---- [ MARGINS ] ---- //
-//  ******************** //
+// *** ---- [ MARGINS ] ---- *** /
 
 
 .base-margin { @include root-margin }
@@ -429,9 +380,7 @@ a {
 .great-margin { @include large-margin }
 
 
-//  *********************************** // 
-//  ---- [ BACKGROUNDS ] ---- //
-//  ************************ //
+// *** ---- [ BACKGROUNDS ] ---- *** /
 
 
 .treat-dark { @include dark }
@@ -443,9 +392,7 @@ a {
 .treat-chrome-dark { @include chrome-dark }
 
 
-//  ****************************** // 
-//  ---- [ COLORS ] ---- //
-//  ******************* //
+// *** ----[ COLORS ] ---- *** /
 
 
 .font-dark { @include color-dark }
@@ -458,9 +405,7 @@ a {
 .font-rust { @include color-rust }
 
 
-//  ********************************** // 
-//  ---- [ TREATMENTS ] ---- //
-//  *********************** //
+// *** ---- [ TREATMENTS ] ---- *** /
 
 
 .text-light { @include light-text }
