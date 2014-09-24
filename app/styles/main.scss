@@ -2,11 +2,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import url('mixins.scss');
 
-// ************************************************************************ //
-// ************************************************************************ //
-// ******  [ MIXIN VARIABLES]  ********************** //
-// ************************************************* //
-// ************************************************ //
 // --------------------------------------------- //
 // ---- [ TOC ] ------------------------------- //
 // ------------------------------------------- //
@@ -24,16 +19,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // ---------------- //
 // ---- [ END ] -- //
 // -------------- //
-// ************* //
+
 
 
 // ************************************************************************ //
 // ***** ------ [ FONT MIXINS ] ------ *********************** //
 // ********************************************************** //
 
-@mixin brand-font {
-  font-family: "museo-sans-rounded", "helvetica neue", "arial";
-}
+@mixin brand-font { font-family: "museo-sans-rounded", "helvetica neue", "arial" }
 
 // ************************************************************************ //
 // ***** ------ [ POSITION MIXINS ] ------ ******************* //
@@ -60,41 +53,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 0
 }
 
-@mixin zero-margin {
-  margin: 0;
-}
-
-@mixin zero-padding {
-  padding: 0;
-}
-
-@mixin float-left {
-  float: left
-}
-
-@mixin break-float {  
-  clear: both;
-}
+@mixin zero-margin { margin: 0 }
+@mixin zero-padding { padding: 0 }
+@mixin float-left { float: left }
+@mixin break-float { clear: both }  
 
 // ************************************************************************ //
 // ***** ------ [ PADDING MIXINS ] ------ ******************** //
 // ********************************************************** //
 
-@mixin root-padding {
-  padding: 15px;
-}
-
-@mixin btn-padding {
-  padding: 5px 15px;
-}
-
-@mixin common-padding {
-  padding: 20px;
-}
-
-@mixin large-padding {
-  padding: 35px
-}
+@mixin root-padding { padding: 15px }
+@mixin btn-padding { padding: 5px 15px }
+@mixin common-padding { padding: 20px }
+@mixin large-padding { padding: 35px }
 
 // margin //
 
@@ -177,6 +148,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // ***** ------ [ BACKGROUND MIXINS ] ------ ***************** //
 // ********************************************************** //
 
+// **************************** //
+// **** [ SWATCH COLORS ] **** //
+// ************************** //
+
 $color-dark: #232323;
 $color-light: #dedede;
 $color-brand: #5cb85c;
@@ -185,7 +160,7 @@ $color-brand: #5cb85c;
   &:hover {
     background-color: darken($color , 20%);
     @include fade;
-/*    @include flip;*/
+    cursor: pointer;
   }
 }
 
@@ -194,21 +169,10 @@ $color-brand: #5cb85c;
   @include color-hover($color);
 }
 
-@mixin dark {  
-  @include color-def($color-dark);
-}
-
-@mixin mid {
-  @include color-def(#757575);
-}
-
-@mixin brand {
-  @include color-def($color-brand);
-}
-
-@mixin light {
-  @include color-def($color-light);
-}
+@mixin dark { @include color-def($color-dark) }
+@mixin mid { @include color-def(#757575) }
+@mixin brand { @include color-def($color-brand) }
+@mixin light { @include color-def($color-light) }
 
 @mixin chrome { background-color: #d0d0d0; }
 @mixin chrome-dark { background-color: #757575; }
@@ -270,17 +234,9 @@ $color-brand: #5cb85c;
 // ***** ------ [ TREATMENT MIXINS ] ------ ****************** //
 // ********************************************************** //
 
-@mixin light-text {
-  text-shadow: 0.5px 0.5px #000000;
-}
-
-@mixin dark-text {
-  text-shadow: 0.5px 0.5px #ffffff;
-}
-
-@mixin mid-text {
-  text-shadow: 0.5px 0.5px #cccccc;
-}
+@mixin light-text { text-shadow: 0.5px 0.5px #000000; }
+@mixin dark-text { text-shadow: 0.5px 0.5px #ffffff; }
+@mixin mid-text { text-shadow: 0.5px 0.5px #cccccc; }
 
 @mixin fade {
     -webkit-transition: all 0.6s ease-in; 
@@ -310,29 +266,12 @@ $color-brand: #5cb85c;
 
 $base-height: percentage(80/480);
 
-.line-one {
-  height: $base-height
-}
-
-.line-two {
-  height: $base-height * 2
-}
-
-.line-three {
-  height: $base-height * 3
-}
-
-.line-four {
-  height: $base-height * 4
-}
-
-.line-five {
-  height: $base-height * 5
-}
-
-.line-six {
-  height: $base-height * 6
-}
+.line-one { height: $base-height }
+.line-two { height: $base-height * 2 }
+.line-three { height: $base-height * 3 }
+.line-four { height: $base-height * 4 }
+.line-five { height: $base-height * 5 }
+.line-six { height: $base-height * 6 }
 
 // ************************************************************************ //
 // ***** ------ [ WIDTH MIXINS ] ------ ********************** //
@@ -340,34 +279,11 @@ $base-height: percentage(80/480);
 
 $base-width: percentage(64/320);
 
-.pillar-one {
-  width: $base-width
-}
-
-.pillar-two {
-  width: $base-width * 2
-}
-
-.pillar-three {
-  width: $base-width * 3
-}
-
-.pillar-four {
-  width: $base-width * 4
-}
-
-.pillar-five {
-  width: $base-width * 5
-}
-
-a {
-  @include color-brand;
-  text-decoration: none;
-  &:hover {
-    @include color-rust;
-  }
-}
-
+.pillar-one { width: $base-width }
+.pillar-two { width: $base-width * 2 }
+.pillar-three { width: $base-width * 3 }
+.pillar-four { width: $base-width * 4 }
+.pillar-five { width: $base-width * 5 }
 
 // ************************************************************************ //
 // ************************************************************************ //
@@ -385,25 +301,22 @@ body, html {
   overflow: hidden
 }
 
+a {
+  @include color-brand;
+  text-decoration: none;
+  &:hover {
+    @include color-rust;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
 }
 
-h1 {
-  font-size: 2.55em
-}
-
-h2 {
-  font-size: 1.85em
-}
-
-h3 {
-  font-size: 1.35em
-}
-
-h4 {
-  font-size: 1.15em
-}
+h1 { font-size: 2.55em }
+h2 { font-size: 1.85em }
+h3 { font-size: 1.35em }
+h4 { font-size: 1.15em }
 
 ul {
   list-style: none;
@@ -417,10 +330,6 @@ a {
   &:hover {
     @include color-rust;
   }
-}
-
-.core {
-  @include core
 }
 
 .foundation {
@@ -441,7 +350,15 @@ a {
       h1, h2 {
         @include light-text;
       }
-      form.pillar-four.line-two {
+      form {
+        .text-box {
+          @include text-box
+        }
+        .form-label {
+          @include form-label
+        }      
+      }
+      .pillar-four.line-two {
         @include dark;
         @include field;
         button {
@@ -480,13 +397,6 @@ a {
     }                     
   }
 }
-.text-box {
-  @include text-box
-}
-
-.form-label {
-  @include form-label
-}
 
 
 //  ******************************* // 
@@ -496,6 +406,7 @@ a {
 
 .grab-left { @include float-left }
 .curb { @include curb }
+.core { @include core }
 
 
 //  ******************************* // 
