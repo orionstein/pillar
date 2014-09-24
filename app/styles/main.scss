@@ -47,6 +47,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @mixin common-padding { padding: 20px }
 @mixin large-padding { padding: 35px }
 
+@mixin hero-padding { padding: 5% }
+
 @mixin search-padding { padding: 15px 0 10px 0;}
 
 // margin //
@@ -65,9 +67,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin curb {
   box-sizing: border-box;
-  width: 90%;
+/*  width: 90%;*/
   margin: 0 0 0 5%;
   padding-top: 5%;
+}
+
+@mixin no-pad-top {
+  padding-top: 0
 }
 
 
@@ -343,10 +349,7 @@ a {
         }      
       }
       form.shade-form {
-/*          top: -15px;
-          position: absolute;*/
           margin: 0;
-/*          @include search-padding;*/
           background: rgba(0, 0, 0, 0.5);
           label {            
             color: #000000;
@@ -369,17 +372,17 @@ a {
             margin-top: 30px;
           }
           button {
-            height: 42px;
+            height: 40px;
             width: 100px;
             font-size: 18px;
-            background-color: #666666;
-            background-image: -webkit-linear-gradient(top, #666666, #333333); 
-            background-image:         linear-gradient(to bottom, #666666, #333333);   
+            background-color: #55b55c;
+            background-image: -webkit-linear-gradient(top, #55b55c, #266b19);
+            background-image:         linear-gradient(to bottom, #55b55c, #266b19);
             border: 1px solid rgba(0, 0, 0, 0.27);
             border-radius: 4px;
             position: relative;
             right: 8px;
-            top: 1px;
+            top: 0;
             border-radius: 0 4px 4px 0;
             @include color-chrome;
             @include light-text;
@@ -398,7 +401,6 @@ a {
       @include core-image;
       .shade {
         position: absolute;
-        top: 16.7%;
         width: 57%;
         background-color: rgba(0, 0, 0, 0.35);
         height: 33.3%;
@@ -434,37 +436,36 @@ a {
       }             
     }   
     &.hero {
-      @include carbon;
+      @include mid;
       @include color-light;
       @include light-text;  
-      .image-wrapper {
-        background-color: rgba(0, 0, 0, 0.28);
-        width: 33%;
-        position: absolute;
-        top: 58%;
-        right: 40px;
-        max-width: 100%;
-        max-height: 20%;
-        min-width: 320px;
-        min-height: 20%;
-        border-radius: 4px 4px 4px 4px;
-        border: 1px solid #0E0E0E;
-        box-shadow: inset 0 0 40px 20px#202020;
-        img {
-          max-width: 100%;
-          min-width: 320px;
-          min-height: 20%;          
-        }
+      img {
+          max-width: 500px;   
+          box-shadow: inset 0 0 40px 20px#202020; 
+          padding-top: 0
       }
       p {
         font-weight: 200;
       }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 1%;
+        li {
+          float: left;
+          background: rgba(0, 0, 0, 0);
+          border-radius: 5px;
+          padding-top: 1.5%;
+          font-size: 3em;
+          margin-left: 3%;
+        }
+      }
     }   
     &.pillar-fixed-footer {
       @include dark;
-        background-image: -webkit-linear-gradient(top, #222, #111); 
-        background-image:         linear-gradient(to bottom, #222, #111);  
-        border: 1px solid #111;     
+      background-image: linear-gradient(to bottom, #565656, rgba(17, 17, 17, 0.53));
+      border: 1px solid rgba(96, 96, 96, 0.1);    
       i {
         color: #fff;
         font-size: 2em
@@ -490,7 +491,8 @@ a {
 .base-padding { @include root-padding }
 .common-padding { @include common-padding }
 .great-padding { @include large-padding }
-
+.hero-padding { @include hero-padding }
+.clear-top { @include no-pad-top }
 
 // *** ---- [ MARGINS ] ---- *** /
 
