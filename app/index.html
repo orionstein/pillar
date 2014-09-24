@@ -16,70 +16,49 @@
 </head>
 <body ng-app="pillarApp">
 <div class="foundation">
-        <section class="boundary pillar-three identification">        	
-            <div class="line-three">
-            	<h1 class="curb">Group Selection</h1>
-
-                <form class="pillar-four line-two">
-                    <label class="form-label">Text Label</label>
-                    <input class="text-box" type="text" placeholder="I am a text box"></input>
-                    <br />
-                    <label class="form-label">Select Label</label>
-                    <select class="text-box" type="select" placeholder="Select Me">
-                        <option>Option One</option>
-                        <option>Option One</option>
-                        <option>Option One</option>
-                    </select>
-                    <div>
-                        <button class="grab-left core">Submit</button>
-                        <button class="grab-left core">Reset</button>
-                    </div>
-                </form>
+    <section class="boundary pillar-three identification">        	
+        <div class="line-three">
+            <div class="shade">
+                <h1 class="curb">Planning, Managing & Sharing</h1>
+                <h3 class="curb">for groups</h3>
             </div>
-
-        </section>
-        <section class="boundary pillar-two user">
-            <div class="line-one in">
-            	<h3 class="curb">Sign In</h3>
-                    <form class="curb">
-                        <label class="form-label sign-in">Username</label>
-                        <input class="text-box small-field" type="text" placeholder="username"></input>
-                        <label class="form-label sign-in">Password</label>
-                        <input class="text-box small-field" type="text" placeholder="passsword"></input>  
-                        <button class="core">Sign In</button>                      
-                    </form>   
-            </div>
-            <div class="line-two up">
-            	<h3 class="curb">Sign Up</h3>
-                    <p class="curb">
-                        Content
-                    </p> 
-            </div>
-        </section>
-        <section class="boundary pillar-five hero">
-            <div class="line-three">
-                <h1 class="curb">Hero</h1>
-            <p class="curb">
+        </div>
+    </section>
+    <section class="boundary pillar-two user">
+        <div class="line-one in set-center">
+        	<h3 class="curb">Sign In</h3>
+            <p class="curb set-center">
                 Content
-            </p>
-            <ul class="curb">
-                <li><a href="">Anchor One</a></li>
-                <li>Item Two</li>
-                <li>Item Three</li>
-                <li><strong>Item Four</strong></li>
-            </ul>
+            </p>             
+        </div>
+        <div class="line-two up">
+            <div class="line-four"></div>
+            <div class="line-two color-carbon-brand headline-footer">
+                <h3 class="curb set-center">Sign Up</h3>
+                <p class="curb set-center">
+                    Content
+                </p> 
             </div>
-        </section>
-        <section class="boundary footer"></section>
+        </div>
+    </section>
+    <section class="boundary pillar-five hero">
+        <div class="line-three">
+            <h1 class="curb">Know Your People</h1>
+        <p class="curb">
+            Content
+        </p>
+        </div>
+    </section>
+    <section class="pillar-fixed-footer in">
+       <i class="fa fa-arrow-circle-up"></i>
+    </section>
 </div>
-
 <!-- build:js(.) scripts/oldieshim.js -->
 <!--[if lt IE 9]>
 <script src="bower_components/es5-shim/es5-shim.js"></script>
 <script src="bower_components/json3/lib/json3.js"></script>
 <![endif]-->
 <!-- endbuild -->
-
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
@@ -93,10 +72,7 @@
 <!-- endbuild -->
 
 <script src="//use.typekit.net/bnt1agr.js"></script>
-<script>try {
-    Typekit.load();
-} catch (e) {
-}</script>
+<script> try { Typekit.load(); } catch (e) { } </script>
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>

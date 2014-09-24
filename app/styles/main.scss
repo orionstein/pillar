@@ -154,11 +154,16 @@ $color-brand: #5cb85c;
 @mixin brand { @include color-def($color-brand) }
 @mixin light { @include color-def($color-light) }
 
-@mixin chrome { background-color: #d0d0d0; }
-@mixin chrome-dark { background-color: #757575; }
-@mixin black { background-color: #081f02; }
-@mixin rust { background-color: #db473d; }
-@mixin action { background-color: #f53b2e; }
+@mixin chrome { background-color: #d0d0d0 }
+@mixin chrome-dark { background-color: #757575 }
+@mixin black { background-color: #081f02 }
+@mixin rust { background-color: #db473d }
+@mixin action { background-color: #f53b2e }
+@mixin carbon { background-color: #3b3b3b }
+@mixin carbon-brand { background-color: #439940 }
+@mixin brand-switch { background-color: #5bce58 }
+
+
 @mixin core-image {
   background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");
   background-repeat: no-repeat;
@@ -176,6 +181,7 @@ $color-brand: #5cb85c;
 @mixin color-mid { color: #757575 }
 @mixin color-dark { color: #232323 }
 @mixin color-black { color: #081f02 }
+@mixin color-carbon { color: #3b3b3b }
 
 @mixin color-rust {
   color: #db473d;
@@ -200,6 +206,11 @@ $color-brand: #5cb85c;
 @mixin fade {
     -webkit-transition: all 0.6s ease-in; 
     transition: all 0.6s ease-in;    
+}
+
+@mixin left-in {
+    -webkit-transition: left 0.6s ease-in; 
+    transition: left 0.6s ease-in;  
 }
 
 @mixin flip {
@@ -243,6 +254,20 @@ $base-width: percentage(64/320);
 .pillar-three { width: $base-width * 3 }
 .pillar-four { width: $base-width * 4 }
 .pillar-five { width: $base-width * 5 }
+
+.foundation .pillar-fixed-footer { 
+  width: 50%;
+  background-color: #323232;
+  bottom: 0;
+  position: absolute;
+  left: 25%;
+  height: 25px;
+  border: 1px solid #474747;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+/*  height: 35%;*/
+}
 
 // ************************************************************************ //
 // ******  [ DEFAULT SELECTORS ]  *******************  //
@@ -325,32 +350,51 @@ a {
     }
     &.identification {
       @include core-image;
+      .shade {
+        position: absolute;
+        top: 24%;
+        width: 57%;
+        background-color: rgba(0, 0, 0, 0.35);
+        height: 15%;
+        line-height: 2.15em;
+        padding-left: 3%;
+        h3 {
+          @include light-text;
+          font-weight: 200;
+        }
+      }
     }
     &.user {
       .in {
-        @include brand;
-        @include color-base;
+        @include carbon;
+        @include color-light;
         @include light-text;
         &:hover {
-          /*@include flip;*/
+
         }              
       } 
       .up {
-        @include mid;
-        @include color-base;
+        @include brand;
+        @include color-light;
         @include light-text;
+        .headline-footer {
+          @include carbon-brand
+        }
         &:hover {
-          /*@include flip;*/
         }        
       }             
     }   
     &.hero {
-      @include dark;
-      @include color-base;
+      @include carbon;
+      @include color-light;
       @include light-text;      
     }   
-    &.footer {
-      @include light;
+    &.pillar-fixed-footer {
+      @include dark;
+      i {
+        color: #fff;
+        font-size: 2em
+      }
     }                     
   }
 }
@@ -362,6 +406,9 @@ a {
 .grab-left { @include float-left }
 .curb { @include curb }
 .core { @include core }
+.set-center { text-align: center }
+.set-left { text-align: left }
+.set-right { text-align: right }
 
 
 // *** ----[ PADDING ] ---- *** /
