@@ -346,13 +346,36 @@ a {
           margin: 1em 0;
           padding: 10px 1em;
           width: 57.1%;
-          label {
+          label {            
             color: #000000;
             text-shadow: 0.5px 0.5px #ffffff;
             font-size: 1.35em;
             font-weight: 600;
             padding: 2px 8px;
             margin: 0 0 2%;
+            @include brand-font
+          }
+          input {
+            background: rgba(0, 0, 0, 0.65);
+            border: 1px solid rgba(0, 0, 0, 0.56);
+            height: 40px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 100;
+            padding: 15px 30px;
+          }
+          button {
+            height: 40px;
+            width: 100px;
+            font-size: 18px;
+            background-color: #666666;
+            background-image: -webkit-linear-gradient(top, #666666, #333333); 
+            background-image:         linear-gradient(to bottom, #666666, #333333);   
+            border: 1px solid rgba(0, 0, 0, 0.27);
+            border-radius: 4px;        
+            @include color-chrome;
+            @include light-text;
+            @include brand-font
           }
       }
       .pillar-four.line-two {
@@ -375,7 +398,7 @@ a {
         padding-left: 3%;
         h3 {
           @include light-text;
-          font-weight: 200;
+          font-weight: 600;
         }
       }
     }
