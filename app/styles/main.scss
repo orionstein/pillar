@@ -47,6 +47,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @mixin common-padding { padding: 20px }
 @mixin large-padding { padding: 35px }
 
+@mixin search-padding { padding: 15px 0 10px 0;}
+
 // margin //
 
 @mixin root-margin {
@@ -343,9 +345,9 @@ a {
       form.shade-form {
           top: -15px;
           position: absolute;
-          margin: 1em 0;
-          padding: 10px 1em;
-          width: 57.1%;
+          margin: 0;
+          @include search-padding;
+          background: rgba(0, 0, 0, 0.5);
           label {            
             color: #000000;
             text-shadow: 0.5px 0.5px #ffffff;
@@ -360,9 +362,11 @@ a {
             border: 1px solid rgba(0, 0, 0, 0.56);
             height: 40px;
             color: #fff;
-            font-size: 18px;
-            font-weight: 100;
+            font-size: 12px;
+            font-weight: 200;
             padding: 15px 30px;
+            text-transform: uppercase;
+            margin-top: 30px;
           }
           button {
             height: 40px;
@@ -372,7 +376,11 @@ a {
             background-image: -webkit-linear-gradient(top, #666666, #333333); 
             background-image:         linear-gradient(to bottom, #666666, #333333);   
             border: 1px solid rgba(0, 0, 0, 0.27);
-            border-radius: 4px;        
+            border-radius: 4px;
+            position: relative;
+            right: 8px;
+            top: 2px;
+            border-radius: 0 4px 4px 0;
             @include color-chrome;
             @include light-text;
             @include brand-font
@@ -425,10 +433,35 @@ a {
     &.hero {
       @include carbon;
       @include color-light;
-      @include light-text;      
+      @include light-text;  
+      .image-wrapper {
+        background-color: rgba(0, 0, 0, 0.28);
+        width: 33%;
+        position: absolute;
+        top: 58%;
+        right: 40px;
+        max-width: 100%;
+        max-height: 20%;
+        min-width: 320px;
+        min-height: 20%;
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid #0E0E0E;
+        box-shadow: inset 0 0 40px 20px#202020;
+        img {
+          max-width: 100%;
+          min-width: 320px;
+          min-height: 20%;          
+        }
+      }
+      p {
+        font-weight: 200;
+      }
     }   
     &.pillar-fixed-footer {
       @include dark;
+        background-image: -webkit-linear-gradient(top, #222, #111); 
+        background-image:         linear-gradient(to bottom, #222, #111);  
+        border: 1px solid #111;     
       i {
         color: #fff;
         font-size: 2em
