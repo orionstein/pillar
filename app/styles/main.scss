@@ -340,6 +340,21 @@ a {
           @include form-label
         }      
       }
+      form.shade-form {
+          top: -15px;
+          position: absolute;
+          margin: 1em 0;
+          padding: 10px 1em;
+          width: 57.1%;
+          label {
+            color: #000000;
+            text-shadow: 0.5px 0.5px #ffffff;
+            font-size: 1.35em;
+            font-weight: 600;
+            padding: 2px 8px;
+            margin: 0 0 2%;
+          }
+      }
       .pillar-four.line-two {
         @include dark;
         @include field;
@@ -356,7 +371,7 @@ a {
         width: 57%;
         background-color: rgba(0, 0, 0, 0.35);
         height: 15%;
-        line-height: 2.15em;
+        line-height: 1em;
         padding-left: 3%;
         h3 {
           @include light-text;
@@ -401,7 +416,6 @@ a {
 
 
 // *** ---- [ HELPERS ] ---- *** /
-
 
 .grab-left { @include float-left }
 .curb { @include curb }
