@@ -2,15 +2,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import url('mixins.scss');
 
-
 // *** ------ [ FONT MIXINS ] ------ *** //
 
-
-@mixin brand-font { font-family: "museo-sans-rounded", "helvetica neue", "arial" }
-
+@mixin brand-font {
+  font-family: "museo-sans-rounded", "helvetica neue", "arial"
+}
 
 // *** ------[ POSITION MIXINS ] ------ *** //
-
 
 @mixin tag {
   border: 1px solid rgba(222, 222, 222, 0.17);
@@ -42,23 +40,47 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 0
 }
 
-@mixin zero-margin { margin: 0 }
-@mixin zero-padding { padding: 0 }
-@mixin float-left { float: left }
-@mixin break-float { clear: both }  
+@mixin zero-margin {
+  margin: 0
+}
 
+@mixin zero-padding {
+  padding: 0
+}
+
+@mixin float-left {
+  float: left
+}
+
+@mixin break-float {
+  clear: both
+}
 
 // *** ------ [ PADDING MIXINS ] ------ *** //
 
+@mixin root-padding {
+  padding: 15px
+}
 
-@mixin root-padding { padding: 15px }
-@mixin btn-padding { padding: 5px 15px }
-@mixin common-padding { padding: 20px }
-@mixin large-padding { padding: 35px }
+@mixin btn-padding {
+  padding: 5px 15px
+}
 
-@mixin hero-padding { padding: 5% }
+@mixin common-padding {
+  padding: 20px
+}
 
-@mixin search-padding { padding: 15px 0 10px 0;}
+@mixin large-padding {
+  padding: 35px
+}
+
+@mixin hero-padding {
+  padding: 5%
+}
+
+@mixin search-padding {
+  padding: 15px 0 10px 0;
+}
 
 // margin //
 
@@ -85,15 +107,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding-top: 0
 }
 
-
 // ***** ------ [ FORM MIXINS ] ------ *** //
-
 
 @mixin field {
   margin: 3% 5%;
   padding: 2%;
   border-radius: 6px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   &.brand {
     background-color: #5cb85c;
     border: 1px solid transparent;
@@ -107,15 +127,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 0 0 2%;
   font-size: 13px;
   border-radius: 4px;
-  border: 1px solid #FFFFFF;  
+  border: 1px solid #FFFFFF;
   background-color: #e0e0e0;
-  background-image: -webkit-linear-gradient(top, #e0e0e0, #f5f5f5); 
-  background-image: linear-gradient(to bottom, #e0e0e0, #f5f5f5);  
+  background-image: -webkit-linear-gradient(top, #e0e0e0, #f5f5f5);
+  background-image: linear-gradient(to bottom, #e0e0e0, #f5f5f5);
   &.small-field {
     width: 20%;
   }
   &.large-field {
-    width:75%
+    width: 75%
   }
 }
 
@@ -124,8 +144,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 2% 1% 1%;
   font-weight: 600;
   &.sign-in {
-  color: #ffffff;
-  text-shadow: 0.5px 0.5px #4F4F4F;
+    color: #ffffff;
+    text-shadow: 0.5px 0.5px #4F4F4F;
   }
 }
 
@@ -134,58 +154,87 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   color: #272727;
   text-shadow: 0.5px 0.5px #F5F5F5;
   background-image: linear-gradient(to bottom, #CCCCCC, #f5f5f5);
-  background-image: -webkit-linear-gradient(top, #CCCCCC, #f5f5f5); 
+  background-image: -webkit-linear-gradient(top, #CCCCCC, #f5f5f5);
   border-radius: 2px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
 }
 
-
 // ***** ------ [ BACKGROUND MIXINS ] ------ *** //
 
-
-
 // **** [ SWATCH COLORS ] ------ *** //
-
 
 $color-dark: #232323;
 $color-light: #dedede;
 $color-brand: #5cb85c;
 
-@mixin color-hover($color){
+@mixin color-hover($color) {
   &:hover {
-    background-color: darken($color , 20%);
+    background-color: darken($color, 20%);
     @include fade;
     cursor: pointer;
   }
 }
 
-@mixin color-def($color){
+@mixin color-def($color) {
   background-color: $color;
   @include color-hover($color);
 }
 
-@mixin back-dark { @include color-def($color-dark) }
-@mixin back-mid { @include color-def(#757575) }
-@mixin back-brand { @include color-def($color-brand) }
-@mixin back-light { @include color-def($color-light) }
+@mixin back-dark {
+  @include color-def($color-dark)
+}
 
-@mixin back-chrome { background-color: #d0d0d0 }
-@mixin back-chrome-dark { background-color: #757575 }
-@mixin back-black { background-color: #081f02 }
-@mixin back-rust { background-color: #db473d }
-@mixin back-action { background-color: #f53b2e }
-@mixin back-carbon { background-color: #3b3b3b }
-@mixin back-carbon-brand { background-color: #439940 }
-@mixin back-brand-switch { background-color: #5bce58 }
+@mixin back-mid {
+  @include color-def(#757575)
+}
 
+@mixin back-brand {
+  @include color-def($color-brand)
+}
+
+@mixin back-light {
+  @include color-def($color-light)
+}
+
+@mixin back-chrome {
+  background-color: #d0d0d0
+}
+
+@mixin back-chrome-dark {
+  background-color: #757575
+}
+
+@mixin back-black {
+  background-color: #081f02
+}
+
+@mixin back-rust {
+  background-color: #db473d
+}
+
+@mixin back-action {
+  background-color: #f53b2e
+}
+
+@mixin back-carbon {
+  background-color: #3b3b3b
+}
+
+@mixin back-carbon-brand {
+  background-color: #439940
+}
+
+@mixin back-brand-switch {
+  background-color: #5bce58
+}
 
 @mixin core-image {
   background-image: url("https://dev.startingpoints.com/modules/core/img/volunteer.jpg");
   background-repeat: no-repeat;
   background-size: 300% auto;
-  background-position: 33% 20%;  
+  background-position: 33% 20%;
 }
 
 .user .line-one.set-center:hover {
@@ -198,6 +247,7 @@ $color-brand: #5cb85c;
   background: rgba(41, 133, 152, 0.57);
   color: #FFF;
   font-size: 1em;
+  height: 7%;
 }
 
 .call-out:hover {
@@ -206,17 +256,39 @@ $color-brand: #5cb85c;
   cursor: pointer;
 }
 
-
 // ***** ------ [ COLOR MIXINS ] ------ *** //
 
-@mixin color-brand { color: #5cb85c }
-@mixin color-light { color: #dedede }
-@mixin color-chrome { color: #d0d0d0 }
-@mixin color-chrome-dark { color: #757575 }
-@mixin color-mid { color: #757575 }
-@mixin color-dark { color: #232323 }
-@mixin color-black { color: #081f02 }
-@mixin color-carbon { color: #3b3b3b }
+@mixin color-brand {
+  color: #5cb85c
+}
+
+@mixin color-light {
+  color: #dedede
+}
+
+@mixin color-chrome {
+  color: #d0d0d0
+}
+
+@mixin color-chrome-dark {
+  color: #757575
+}
+
+@mixin color-mid {
+  color: #757575
+}
+
+@mixin color-dark {
+  color: #232323
+}
+
+@mixin color-black {
+  color: #081f02
+}
+
+@mixin color-carbon {
+  color: #3b3b3b
+}
 
 @mixin color-rust {
   color: #db473d;
@@ -230,34 +302,40 @@ $color-brand: #5cb85c;
   color: #ffffff;
 }
 
-
 // ***** ------ [ TREATMENT MIXINS ] ------ *** //
 
+@mixin light-text {
+  text-shadow: 0.5px 0.5px #000000;
+}
 
-@mixin light-text { text-shadow: 0.5px 0.5px #000000; }
-@mixin dark-text { text-shadow: 0.5px 0.5px #ffffff; }
-@mixin mid-text { text-shadow: 0.5px 0.5px #cccccc; }
+@mixin dark-text {
+  text-shadow: 0.5px 0.5px #ffffff;
+}
+
+@mixin mid-text {
+  text-shadow: 0.5px 0.5px #cccccc;
+}
 
 @mixin fade {
-    -webkit-transition: all 0.6s ease-in; 
-    transition: all 0.6s ease-in;    
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 @mixin left-in {
-    -webkit-transition: left 0.6s ease-in; 
-    transition: left 0.6s ease-in;  
+  -webkit-transition: left 0.6s ease-in;
+  transition: left 0.6s ease-in;
 }
 
 @mixin flip {
-  -webkit-perspective: 300px; 
-  -ms-perspective: 300px;  
+  -webkit-perspective: 300px;
+  -ms-perspective: 300px;
   perspective: 300px;
-  -webkit-transform: rotateY(360deg);  
-  -ms-transform: rotateY(360deg);   
-  transform: rotateY(360deg);   
+  -webkit-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  transform: rotateY(360deg);
   -ms-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;         
+  transform-style: preserve-3d;
 }
 
 @mixin toggle {
@@ -265,32 +343,59 @@ $color-brand: #5cb85c;
   height: 0;
 }
 
-
 // ***** ------ [ HEIGHT MIXINS ] ------ *** //
-
 
 $base-height: percentage(80/480);
 
-.fill-one { height: $base-height }
-.fill-two { height: $base-height * 2 }
-.fill-three { height: $base-height * 3 }
-.fill-four { height: $base-height * 4 }
-.fill-five { height: $base-height * 5 }
-.fill-six { height: $base-height * 6 }
+.fill-one {
+  height: $base-height
+}
 
+.fill-two {
+  height: $base-height * 2
+}
+
+.fill-three {
+  height: $base-height * 3
+}
+
+.fill-four {
+  height: $base-height * 4
+}
+
+.fill-five {
+  height: $base-height * 5
+}
+
+.fill-six {
+  height: $base-height * 6
+}
 
 // ***** ------ [ WIDTH MIXINS ]------ *** //
 
-
 $base-width: percentage(64/320);
 
-.pillar-one { width: $base-width }
-.pillar-two { width: $base-width * 2 }
-.pillar-three { width: $base-width * 3 }
-.pillar-four { width: $base-width * 4 }
-.pillar-five { width: $base-width * 5 }
+.pillar-one {
+  width: $base-width
+}
 
-.foundation .pillar-fixed-footer { 
+.pillar-two {
+  width: $base-width * 2
+}
+
+.pillar-three {
+  width: $base-width * 3
+}
+
+.pillar-four {
+  width: $base-width * 4
+}
+
+.pillar-five {
+  width: $base-width * 5
+}
+
+.foundation .pillar-fixed-footer {
   width: 50%;
   background-color: #323232;
   bottom: 0;
@@ -301,37 +406,36 @@ $base-width: percentage(64/320);
   border-bottom: none;
   border-radius: 4px 4px 0 0;
   cursor: pointer;
-/*  height: 35%;*/
+  /*  height: 35%;*/
 }
 
-.fill-split-left{
+.fill-split-left {
   padding-left: $base-width/2;
 }
 
-.fill-split-right{
+.fill-split-right {
   padding-right: $base-width/2;
 }
 
-.fill-one-left{
+.fill-one-left {
   padding-left: $base-width;
 }
 
-.fill-one-right{
+.fill-one-right {
   padding-right: $base-width;
 }
 
-.fill-two-left{
+.fill-two-left {
   padding-left: $base-width*2;
 }
 
-.fill-two-right{
+.fill-two-right {
   padding-right: $base-width*2;
 }
 
 // ************************************************************************ //
 // ******  [ DEFAULT SELECTORS ]  *******************  //
 // ************************************************* //
-
 
 body, html {
   height: 100%;
@@ -357,10 +461,21 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-h1 { font-size: 2.55em }
-h2 { font-size: 1.85em }
-h3 { font-size: 1.35em }
-h4 { font-size: 1.15em }
+h1 {
+  font-size: 2.55em
+}
+
+h2 {
+  font-size: 1.85em
+}
+
+h3 {
+  font-size: 1.35em
+}
+
+h4 {
+  font-size: 1.15em
+}
 
 ul {
   list-style: none;
@@ -376,13 +491,10 @@ a {
   }
 }
 
-
-
-
 .shade-form {
   margin: 0;
   background: rgba(0, 0, 0, 0.5);
-  label {            
+  label {
     @include brand-font
   }
   input {
@@ -396,27 +508,25 @@ a {
     font-size: 18px;
     @include color-chrome;
     @include light-text;
-    @include brand-font 
+    @include brand-font
   }
-  button {   
-      background-color: #55b55c;
-      background-image: linear-gradient(to bottom, #55b55c, #266b19);
-      border: 1px solid rgba(42, 42, 42, 0.81);
-      position: relative;
-      border-radius: 0 0 15px 0;
-      font-weight: 400;
-      width: 7%;
-      min-width: 40px;
-      height: 3.5em;
-      right: 6px;
-      top: -2px;
-      @include color-chrome;
-      @include light-text;
-      @include brand-font 
+  button {
+    background-color: #55b55c;
+    background-image: linear-gradient(to bottom, #55b55c, #266b19);
+    border: 1px solid rgba(42, 42, 42, 0.81);
+    position: relative;
+    border-radius: 0 0 15px 0;
+    font-weight: 400;
+    width: 7%;
+    min-width: 40px;
+    height: 3.5em;
+    right: 6px;
+    top: -2px;
+    @include color-chrome;
+    @include light-text;
+    @include brand-font
   }
 }
-
-
 
 .foundation {
   height: 100%;
@@ -426,15 +536,15 @@ a {
   @include back-carbon;
   @include brand-font;
   section {
-    float:left;
-/*    overflow:hidden;*/
+    float: left;
+    /*    overflow:hidden;*/
     &.boundary {
       @include back-chrome;
       background: rgba(222, 222, 222, 0.17);
       left: 1px;
-      bottom: 1px;         
+      bottom: 1px;
       p {
-        font-size: 1em;     
+        font-size: 1em;
       }
       h1, h2 {
         @include light-text;
@@ -445,7 +555,7 @@ a {
         }
         .form-label {
           @include form-label
-        }      
+        }
       }
       .pillar-four.line-two {
         @include back-dark;
@@ -453,12 +563,12 @@ a {
         button {
           @include btn-padding;
         }
-      }      
+      }
     }
     &.id {
       @include core-image;
       .shade {
-      
+
         h1 {
           line-height: 1em
         }
@@ -475,8 +585,8 @@ a {
         @include light-text;
         &:hover {
 
-        }              
-      } 
+        }
+      }
       .up {
         @include back-brand;
         @include color-light;
@@ -486,13 +596,13 @@ a {
         }
         &:hover {
           @include back-action
-        }        
-      }             
-    }   
+        }
+      }
+    }
     &.hero {
       @include back-mid;
       @include color-light;
-      @include light-text;  
+      @include light-text;
       img {
         box-shadow: inset 0 0 40px 20px #202020;
         padding-top: 0;
@@ -518,83 +628,166 @@ a {
           opacity: 0.35;
         }
       }
-    }   
+    }
     &.pillar-fixed-footer {
-/*      width: 50%;
-      background-color: rgba(53, 53, 53, 0.83);
-      bottom: 0;
-      position: absolute;
-      left: 5%;
-      height: 73%;
-      width: 90%;
-      border: 1px solid rgba(0, 0, 0, .15);
-      border-bottom: none;
-      border-radius: 8px 8px 0 0;
-      cursor: pointer;*/
-    }                     
+      /*      width: 50%;
+            background-color: rgba(53, 53, 53, 0.83);
+            bottom: 0;
+            position: absolute;
+            left: 5%;
+            height: 73%;
+            width: 90%;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;*/
+    }
   }
 }
 
-
 // *** ---- [ HELPERS ] ---- *** /
 
-.grab-left { @include float-left }
-.fill { @include fill }
-.core { @include core }
-.center { text-align: center }
-.left { text-align: left }
-.right { text-align: right }
-.tag { @include tag }
+.grab-left {
+  @include float-left
+}
 
+.fill {
+  @include fill
+}
+
+.core {
+  @include core
+}
+
+.center {
+  text-align: center
+}
+
+.left {
+  text-align: left
+}
+
+.right {
+  text-align: right
+}
+
+.tag {
+  @include tag
+}
 
 // *** ----[ PADDING ] ---- *** /
 
+.base-padding {
+  @include root-padding
+}
 
-.base-padding { @include root-padding }
-.common-padding { @include common-padding }
-.great-padding { @include large-padding }
-.hero-padding { @include hero-padding }
-.clear-top { @include no-pad-top }
+.common-padding {
+  @include common-padding
+}
+
+.great-padding {
+  @include large-padding
+}
+
+.hero-padding {
+  @include hero-padding
+}
+
+.clear-top {
+  @include no-pad-top
+}
 
 // *** ---- [ MARGINS ] ---- *** /
 
+.base-margin {
+  @include root-margin
+}
 
-.base-margin { @include root-margin }
-.floor-margin { @include common-margin }
-.great-margin { @include large-margin }
+.floor-margin {
+  @include common-margin
+}
 
+.great-margin {
+  @include large-margin
+}
 
 // *** ---- [ BACKGROUNDS ] ---- *** /
 
+.bg-dark {
+  @include back-dark
+}
 
-.bg-dark { @include back-dark }
-.bg-brand { @include back-brand }
-.bg-light { @include back-light }
-.bg-mid { @include back-mid }
-.bg-chrome { @include back-chrome }
-.bg-action { @include back-action }
-.bg-chrome-dark { @include back-chrome-dark }
+.bg-brand {
+  @include back-brand
+}
 
+.bg-light {
+  @include back-light
+}
+
+.bg-mid {
+  @include back-mid
+}
+
+.bg-chrome {
+  @include back-chrome
+}
+
+.bg-action {
+  @include back-action
+}
+
+.bg-chrome-dark {
+  @include back-chrome-dark
+}
 
 // *** ----[ COLORS ] ---- *** /
 
+.font-dark {
+  @include color-dark
+}
 
-.font-dark { @include color-dark }
-.font-brand { @include color-brand }
-.font-light { @include color-light }
-.font-mid { @include color-mid }
-.font-chrome { @include color-chrome }
-.font-action { @include color-action }
-.font-chrome-dark { @include color-chrome-dark }
-.font-rust { @include color-rust }
+.font-brand {
+  @include color-brand
+}
 
+.font-light {
+  @include color-light
+}
+
+.font-mid {
+  @include color-mid
+}
+
+.font-chrome {
+  @include color-chrome
+}
+
+.font-action {
+  @include color-action
+}
+
+.font-chrome-dark {
+  @include color-chrome-dark
+}
+
+.font-rust {
+  @include color-rust
+}
 
 // *** ---- [ TREATMENTS ] ---- *** /
 
+.text-light {
+  @include light-text
+}
 
-.text-light { @include light-text }
-.text-mid { @include mid-text }
-.text-dark { @include dark-text }
+.text-mid {
+  @include mid-text
+}
+
+.text-dark {
+  @include dark-text
+}
 
 
 
