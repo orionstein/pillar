@@ -12,7 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // *** ------[ POSITION MIXINS ] ------ *** //
 
 
-@mixin tag-fill {
+@mixin tag {
   border: 1px solid rgba(222, 222, 222, 0.17);
   margin-left: -1px;
   margin-right: -1px;
@@ -76,9 +76,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin fill {
   box-sizing: border-box;
-  /* width: 90%; */
   margin: 0 5% 0 5%;
-  padding: 3% 0 0 0;
+  padding: 2% 0 2% 0;
+  line-height: 1.5em;
 }
 
 @mixin no-pad-top {
@@ -193,14 +193,9 @@ $color-brand: #5cb85c;
   transition: all 0.6s ease-in;
   cursor: pointer;
 }
-.user .line-one.set-center {
-/*background: rgba(0, 0, 0, 0.79);*/
-}
 
 .call-out {
-  background: rgba(41, 133, 152, 0.75);
-/*  padding: 1em 0 11.7em;
-  line-height: 2.9em;*/
+  background: rgba(41, 133, 152, 0.57);
   color: #FFF;
   font-size: 1em;
 }
@@ -276,12 +271,12 @@ $color-brand: #5cb85c;
 
 $base-height: percentage(80/480);
 
-.line-one { height: $base-height }
-.line-two { height: $base-height * 2 }
-.line-three { height: $base-height * 3 }
-.line-four { height: $base-height * 4 }
-.line-five { height: $base-height * 5 }
-.line-six { height: $base-height * 6 }
+.fill-one { height: $base-height }
+.fill-two { height: $base-height * 2 }
+.fill-three { height: $base-height * 3 }
+.fill-four { height: $base-height * 4 }
+.fill-five { height: $base-height * 5 }
+.fill-six { height: $base-height * 6 }
 
 
 // ***** ------ [ WIDTH MIXINS ]------ *** //
@@ -428,7 +423,7 @@ a {
   width: 100%;
   color: #fff;
   @include dark-text;
-  @include back-dark;
+  @include back-carbon;
   @include brand-font;
   section {
     float:left;
@@ -490,6 +485,7 @@ a {
           @include back-brand
         }
         &:hover {
+          @include back-action
         }        
       }             
     }   
@@ -548,7 +544,7 @@ a {
 .center { text-align: center }
 .left { text-align: left }
 .right { text-align: right }
-.tag { @include tag-fill }
+.tag { @include tag }
 
 
 // *** ----[ PADDING ] ---- *** /
@@ -571,13 +567,13 @@ a {
 // *** ---- [ BACKGROUNDS ] ---- *** /
 
 
-.treat-dark { @include back-dark }
-.treat-brand { @include back-brand }
-.treat-light { @include back-light }
-.treat-mid { @include back-mid }
-.treat-chrome { @include back-chrome }
-.treat-action { @include back-action }
-.treat-chrome-dark { @include back-chrome-dark }
+.bg-dark { @include back-dark }
+.bg-brand { @include back-brand }
+.bg-light { @include back-light }
+.bg-mid { @include back-mid }
+.bg-chrome { @include back-chrome }
+.bg-action { @include back-action }
+.bg-chrome-dark { @include back-chrome-dark }
 
 
 // *** ----[ COLORS ] ---- *** /
