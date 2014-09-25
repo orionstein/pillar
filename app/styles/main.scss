@@ -12,7 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // *** ------[ POSITION MIXINS ] ------ *** //
 
 
-@mixin tag-curb {
+@mixin tag-fill {
   border: 1px solid rgba(222, 222, 222, 0.17);
   margin-left: -1px;
   margin-right: -1px;
@@ -74,7 +74,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   margin: 35px
 }
 
-@mixin curb {
+@mixin fill {
   box-sizing: border-box;
   /* width: 90%; */
   margin: 0 5% 0 5%;
@@ -309,27 +309,27 @@ $base-width: percentage(64/320);
 /*  height: 35%;*/
 }
 
-.curb-split-left{
+.fill-split-left{
   padding-left: $base-width/2;
 }
 
-.curb-split-right{
+.fill-split-right{
   padding-right: $base-width/2;
 }
 
-.curb-one-left{
+.fill-one-left{
   padding-left: $base-width;
 }
 
-.curb-one-right{
+.fill-one-right{
   padding-right: $base-width;
 }
 
-.curb-two-left{
+.fill-two-left{
   padding-left: $base-width*2;
 }
 
-.curb-two-right{
+.fill-two-right{
   padding-right: $base-width*2;
 }
 
@@ -543,12 +543,12 @@ a {
 // *** ---- [ HELPERS ] ---- *** /
 
 .grab-left { @include float-left }
-.curb { @include curb }
+.fill { @include fill }
 .core { @include core }
 .center { text-align: center }
 .left { text-align: left }
 .right { text-align: right }
-.tag { @include tag-curb }
+.tag { @include tag-fill }
 
 
 // *** ----[ PADDING ] ---- *** /
