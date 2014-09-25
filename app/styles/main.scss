@@ -12,6 +12,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // *** ------[ POSITION MIXINS ] ------ *** //
 
 
+@mixin tag-curb {
+  border: 1px solid rgba(222, 222, 222, 0.17);
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  position: relative;
+}
+
 @mixin inline {
   display: block;
   float: left;
@@ -67,9 +76,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin curb {
   box-sizing: border-box;
-/*  width: 90%;*/
-  margin: 0 0 0 5%;
-  padding-top: 5%;
+  /* width: 90%; */
+  margin: 0 5% 0 5%;
+  padding: 3% 0 0 0;
 }
 
 @mixin no-pad-top {
@@ -157,19 +166,19 @@ $color-brand: #5cb85c;
   @include color-hover($color);
 }
 
-@mixin dark { @include color-def($color-dark) }
-@mixin mid { @include color-def(#757575) }
-@mixin brand { @include color-def($color-brand) }
-@mixin light { @include color-def($color-light) }
+@mixin back-dark { @include color-def($color-dark) }
+@mixin back-mid { @include color-def(#757575) }
+@mixin back-brand { @include color-def($color-brand) }
+@mixin back-light { @include color-def($color-light) }
 
-@mixin chrome { background-color: #d0d0d0 }
-@mixin chrome-dark { background-color: #757575 }
-@mixin black { background-color: #081f02 }
-@mixin rust { background-color: #db473d }
-@mixin action { background-color: #f53b2e }
-@mixin carbon { background-color: #3b3b3b }
-@mixin carbon-brand { background-color: #439940 }
-@mixin brand-switch { background-color: #5bce58 }
+@mixin back-chrome { background-color: #d0d0d0 }
+@mixin back-chrome-dark { background-color: #757575 }
+@mixin back-black { background-color: #081f02 }
+@mixin back-rust { background-color: #db473d }
+@mixin back-action { background-color: #f53b2e }
+@mixin back-carbon { background-color: #3b3b3b }
+@mixin back-carbon-brand { background-color: #439940 }
+@mixin back-brand-switch { background-color: #5bce58 }
 
 
 @mixin core-image {
@@ -189,18 +198,17 @@ $color-brand: #5cb85c;
 }
 
 .call-out {
-background: rgba(41, 133, 152, 0.75);
-padding: 1em 0 2em;
-line-height: 3em;
-color: #FFF;
-font-size: 1em;
+  background: rgba(41, 133, 152, 0.75);
+/*  padding: 1em 0 11.7em;
+  line-height: 2.9em;*/
+  color: #FFF;
+  font-size: 1em;
 }
 
 .call-out:hover {
-background-color: #C74B2B;
-transition: all 0.6s ease-in;
-cursor: pointer;
-
+  background-color: #C74B2B;
+  transition: all 0.6s ease-in;
+  cursor: pointer;
 }
 
 
@@ -301,6 +309,30 @@ $base-width: percentage(64/320);
 /*  height: 35%;*/
 }
 
+.curb-split-left{
+  padding-left: $base-width/2;
+}
+
+.curb-split-right{
+  padding-right: $base-width/2;
+}
+
+.curb-one-left{
+  padding-left: $base-width;
+}
+
+.curb-one-right{
+  padding-right: $base-width;
+}
+
+.curb-two-left{
+  padding-left: $base-width*2;
+}
+
+.curb-two-right{
+  padding-right: $base-width*2;
+}
+
 // ************************************************************************ //
 // ******  [ DEFAULT SELECTORS ]  *******************  //
 // ************************************************* //
@@ -310,7 +342,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 100;
   line-height: 1.65em;
   overflow: hidden
@@ -349,20 +381,65 @@ a {
   }
 }
 
+
+
+
+.shade-form {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  label {            
+    @include brand-font
+  }
+  input {
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 0 0 0 5px;
+    width: 65%;
+    font-size: 18px;
+    @include color-chrome;
+    @include light-text;
+    @include brand-font 
+  }
+  button {   
+      background-color: #55b55c;
+      background-image: linear-gradient(to bottom, #55b55c, #266b19);
+      border: 1px solid rgba(42, 42, 42, 0.81);
+      position: relative;
+      border-radius: 0 0 15px 0;
+      font-weight: 400;
+      width: 7%;
+      min-width: 40px;
+      height: 3.5em;
+      right: 6px;
+      top: -2px;
+      @include color-chrome;
+      @include light-text;
+      @include brand-font 
+  }
+}
+
+
+
 .foundation {
   height: 100%;
   width: 100%;
   color: #fff;
   @include dark-text;
-  @include dark;
+  @include back-dark;
   @include brand-font;
   section {
     float:left;
-    overflow:hidden;
+/*    overflow:hidden;*/
     &.boundary {
-      @include chrome;
+      @include back-chrome;
+      background: rgba(222, 222, 222, 0.17);
+      left: 1px;
+      bottom: 1px;         
       p {
-        font-size: 1em;
+        font-size: 1em;     
       }
       h1, h2 {
         @include light-text;
@@ -375,57 +452,15 @@ a {
           @include form-label
         }      
       }
-      form.shade-form {
-          margin: 0;
-          background: rgba(0, 0, 0, 0.5);
-          label {            
-/*            color: #000000;
-            text-shadow: 0.5px 0.5px #ffffff;
-            font-size: 1.35em;
-            font-weight: 600;
-            padding: 2px 8px;
-            margin: 0 0 2%;*/
-            @include brand-font
-          }
-          input {
-            background: rgba(0, 0, 0, 0.65);
-            border: 1px solid rgba(0, 0, 0, 0.75);
-            font-weight: 100;
-            text-transform: uppercase;
-            position: relative;
-            border-radius: 0 0 0 5px;
-            width: 65%;
-            height: 3.3em;
-            @include color-chrome;
-            @include light-text;
-            @include brand-font 
-          }
-            button {   
-            background-color: #55b55c;
-            background-image: linear-gradient(to bottom, #55b55c, #266b19);
-            border: 1px solid rgba(42, 42, 42, 0.81);
-            position: relative;
-            border-radius: 0 0 15px 0;
-            font-weight: 400;
-            width: 7%;
-            min-width: 40px;
-            height: 3.5em;
-            right: 6px;
-            top: -2px;
-            @include color-chrome;
-            @include light-text;
-            @include brand-font 
-          }
-      }
       .pillar-four.line-two {
-        @include dark;
+        @include back-dark;
         @include field;
         button {
           @include btn-padding;
         }
       }      
     }
-    &.identification {
+    &.id {
       @include core-image;
       .shade {
       
@@ -440,7 +475,7 @@ a {
     }
     &.user {
       .in {
-        @include carbon;
+        @include back-carbon;
         @include color-light;
         @include light-text;
         &:hover {
@@ -448,29 +483,26 @@ a {
         }              
       } 
       .up {
-        @include brand;
+        @include back-brand;
         @include color-light;
         @include light-text;
         .headline-footer {
-          @include carbon-brand
+          @include back-brand
         }
         &:hover {
         }        
       }             
     }   
     &.hero {
-      @include mid;
+      @include back-mid;
       @include color-light;
       @include light-text;  
       img {
-max-width: 500px; 
-box-shadow: inset 0 0 40px 20px #202020;
-padding-top: 0;
-margin: 5% 0 0 5%;
-width: 45%;
-border-radius: 7px;
-border: 1px solid #555;
-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.07);
+        box-shadow: inset 0 0 40px 20px #202020;
+        padding-top: 0;
+        border-radius: 7px;
+        border: 1px solid #555;
+        box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.07);
       }
       p {
         font-weight: 200;
@@ -513,9 +545,10 @@ box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.07);
 .grab-left { @include float-left }
 .curb { @include curb }
 .core { @include core }
-.set-center { text-align: center }
-.set-left { text-align: left }
-.set-right { text-align: right }
+.center { text-align: center }
+.left { text-align: left }
+.right { text-align: right }
+.tag { @include tag-curb }
 
 
 // *** ----[ PADDING ] ---- *** /
@@ -538,13 +571,13 @@ box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.07);
 // *** ---- [ BACKGROUNDS ] ---- *** /
 
 
-.treat-dark { @include dark }
-.treat-brand { @include brand }
-.treat-light { @include light }
-.treat-mid { @include mid }
-.treat-chrome { @include chrome }
-.treat-action { @include action }
-.treat-chrome-dark { @include chrome-dark }
+.treat-dark { @include back-dark }
+.treat-brand { @include back-brand }
+.treat-light { @include back-light }
+.treat-mid { @include back-mid }
+.treat-chrome { @include back-chrome }
+.treat-action { @include back-action }
+.treat-chrome-dark { @include back-chrome-dark }
 
 
 // *** ----[ COLORS ] ---- *** /
