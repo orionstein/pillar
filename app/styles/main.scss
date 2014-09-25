@@ -179,6 +179,30 @@ $color-brand: #5cb85c;
   background-position: 33% 20%;  
 }
 
+.user .line-one.set-center:hover {
+  background: rgba(200, 27, 27, 0.79);
+  transition: all 0.6s ease-in;
+  cursor: pointer;
+}
+.user .line-one.set-center {
+/*background: rgba(0, 0, 0, 0.79);*/
+}
+
+.call-out {
+background: rgba(41, 133, 152, 0.75);
+padding: 1em 0 2em;
+line-height: 3em;
+color: #FFF;
+font-size: 1em;
+}
+
+.call-out:hover {
+background-color: #C74B2B;
+transition: all 0.6s ease-in;
+cursor: pointer;
+
+}
+
 
 // ***** ------ [ COLOR MIXINS ] ------ *** //
 
@@ -286,7 +310,8 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 100;
   line-height: 1.65em;
   overflow: hidden
 }
@@ -301,6 +326,8 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
 h1 { font-size: 2.55em }
@@ -352,41 +379,42 @@ a {
           margin: 0;
           background: rgba(0, 0, 0, 0.5);
           label {            
-            color: #000000;
+/*            color: #000000;
             text-shadow: 0.5px 0.5px #ffffff;
             font-size: 1.35em;
             font-weight: 600;
             padding: 2px 8px;
-            margin: 0 0 2%;
+            margin: 0 0 2%;*/
             @include brand-font
           }
           input {
             background: rgba(0, 0, 0, 0.65);
-            border: 1px solid rgba(0, 0, 0, 0.56);
-            height: 40px;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 200;
-            padding: 15px 30px;
+            border: 1px solid rgba(0, 0, 0, 0.75);
+            font-weight: 100;
             text-transform: uppercase;
-            margin-top: 30px;
-          }
-          button {
-            height: 40px;
-            width: 100px;
-            font-size: 18px;
-            background-color: #55b55c;
-            background-image: -webkit-linear-gradient(top, #55b55c, #266b19);
-            background-image:         linear-gradient(to bottom, #55b55c, #266b19);
-            border: 1px solid rgba(0, 0, 0, 0.27);
-            border-radius: 4px;
             position: relative;
-            right: 8px;
-            top: 0;
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 0 0 5px;
+            width: 65%;
+            height: 3.3em;
             @include color-chrome;
             @include light-text;
-            @include brand-font
+            @include brand-font 
+          }
+            button {   
+            background-color: #55b55c;
+            background-image: linear-gradient(to bottom, #55b55c, #266b19);
+            border: 1px solid rgba(42, 42, 42, 0.81);
+            position: relative;
+            border-radius: 0 0 15px 0;
+            font-weight: 400;
+            width: 7%;
+            min-width: 40px;
+            height: 3.5em;
+            right: 6px;
+            top: -2px;
+            @include color-chrome;
+            @include light-text;
+            @include brand-font 
           }
       }
       .pillar-four.line-two {
@@ -400,14 +428,9 @@ a {
     &.identification {
       @include core-image;
       .shade {
-        position: absolute;
-        width: 57%;
-        background-color: rgba(0, 0, 0, 0.35);
-        height: 33.3%;
-        line-height: 1em;
-        padding-left: 3%;
+      
         h1 {
-          line-height: 1.2em
+          line-height: 1em
         }
         h3 {
           @include light-text;
@@ -440,9 +463,14 @@ a {
       @include color-light;
       @include light-text;  
       img {
-          max-width: 500px;   
-          box-shadow: inset 0 0 40px 20px#202020; 
-          padding-top: 0
+max-width: 500px; 
+box-shadow: inset 0 0 40px 20px #202020;
+padding-top: 0;
+margin: 5% 0 0 5%;
+width: 45%;
+border-radius: 7px;
+border: 1px solid #555;
+box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.07);
       }
       p {
         font-weight: 200;
@@ -454,22 +482,27 @@ a {
         padding-top: 1%;
         li {
           float: left;
-          background: rgba(0, 0, 0, 0);
-          border-radius: 5px;
-          padding-top: 1.5%;
-          font-size: 3em;
+          background: transparent;
+          padding-top: 25px;
+          font-size: 2.35em;
           margin-left: 3%;
+          text-shadow: none;
+          opacity: 0.35;
         }
       }
     }   
     &.pillar-fixed-footer {
-      @include dark;
-      background-image: linear-gradient(to bottom, #565656, rgba(17, 17, 17, 0.53));
-      border: 1px solid rgba(96, 96, 96, 0.1);    
-      i {
-        color: #fff;
-        font-size: 2em
-      }
+/*      width: 50%;
+      background-color: rgba(53, 53, 53, 0.83);
+      bottom: 0;
+      position: absolute;
+      left: 5%;
+      height: 73%;
+      width: 90%;
+      border: 1px solid rgba(0, 0, 0, .15);
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;*/
     }                     
   }
 }
