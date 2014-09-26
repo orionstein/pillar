@@ -1,0 +1,410 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'karma-firefox-launcher' ]
+2 info using npm@2.0.0
+3 info using node@v0.10.30
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json pillar@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'karma-firefox-launcher', null ]
+8 verbose cache add spec="karma-firefox-launcher" args=["karma-firefox-launcher",null]
+9 verbose parsed spec { raw: 'karma-firefox-launcher',
+9 verbose parsed spec   scope: null,
+9 verbose parsed spec   name: 'karma-firefox-launcher',
+9 verbose parsed spec   rawSpec: '',
+9 verbose parsed spec   spec: '*',
+9 verbose parsed spec   type: 'range' }
+10 verbose parsed spec { raw: 'karma-firefox-launcher',
+10 verbose parsed spec   scope: null,
+10 verbose parsed spec   name: 'karma-firefox-launcher',
+10 verbose parsed spec   rawSpec: '',
+10 verbose parsed spec   spec: '*',
+10 verbose parsed spec   type: 'range' }
+11 verbose addNamed [ 'karma-firefox-launcher', '*' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 981535e0-karma-firefox-launcher karma-firefox-launcher@*
+14 verbose lock karma-firefox-launcher@* /Users/jrunion/.npm/981535e0-karma-firefox-launcher.lock
+15 silly addNameRange { name: 'karma-firefox-launcher', range: '*', hasData: false }
+16 verbose mapToRegistry name karma-firefox-launcher
+17 verbose mapToRegistry uri https://registry.npmjs.org/karma-firefox-launcher
+18 silly addNameRange number 2 { name: 'karma-firefox-launcher', range: '*', hasData: true }
+19 silly addNameRange versions [ 'karma-firefox-launcher',
+19 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.1.0', '0.1.1', '0.1.2', '0.1.3' ] ]
+20 verbose addNamed [ 'karma-firefox-launcher', '0.1.3' ]
+21 verbose addNamed [ '0.1.3', '0.1.3' ]
+22 silly lockFile 0f7a9db8-karma-firefox-launcher-0-1-3 karma-firefox-launcher@0.1.3
+23 verbose lock karma-firefox-launcher@0.1.3 /Users/jrunion/.npm/0f7a9db8-karma-firefox-launcher-0-1-3.lock
+24 silly lockFile 0f7a9db8-karma-firefox-launcher-0-1-3 karma-firefox-launcher@0.1.3
+25 silly lockFile 0f7a9db8-karma-firefox-launcher-0-1-3 karma-firefox-launcher@0.1.3
+26 silly lockFile 981535e0-karma-firefox-launcher karma-firefox-launcher@*
+27 silly lockFile 981535e0-karma-firefox-launcher karma-firefox-launcher@*
+28 silly resolved [ { name: 'karma-firefox-launcher',
+28 silly resolved     version: '0.1.3',
+28 silly resolved     description: 'A Karma plugin. Launcher for Firefox.',
+28 silly resolved     main: 'index.js',
+28 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+28 silly resolved     repository:
+28 silly resolved      { type: 'git',
+28 silly resolved        url: 'git://github.com/karma-runner/karma-firefox-launcher.git' },
+28 silly resolved     keywords: [ 'karma-plugin', 'karma-launcher', 'firefox' ],
+28 silly resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+28 silly resolved     dependencies: {},
+28 silly resolved     peerDependencies: { karma: '>=0.9' },
+28 silly resolved     license: 'MIT',
+28 silly resolved     devDependencies:
+28 silly resolved      { grunt: '~0.4.1',
+28 silly resolved        'grunt-npm': '~0.0.2',
+28 silly resolved        'grunt-bump': '~0.0.7',
+28 silly resolved        'grunt-auto-release': '~0.0.2' },
+28 silly resolved     contributors:
+28 silly resolved      [ [Object],
+28 silly resolved        [Object],
+28 silly resolved        [Object],
+28 silly resolved        [Object],
+28 silly resolved        [Object],
+28 silly resolved        [Object],
+28 silly resolved        [Object],
+28 silly resolved        [Object] ],
+28 silly resolved     readme: '# karma-firefox-launcher\n\n> Launcher for Mozilla Firefox.\n\n## Installation\n\nThe easiest way is to keep `karma-firefox-launcher` as a devDependency in your `package.json`.\n```json\n{\n  "devDependencies": {\n    "karma": "~0.10",\n    "karma-firefox-launcher": "~0.1"\n  }\n}\n```\n\nYou can simple do it by:\n```bash\nnpm install karma-firefox-launcher --save-dev\n```\n\n## Configuration\n```js\n// karma.conf.js\nmodule.exports = function(config) {\n  config.set({\n    browsers: [\'Firefox\', \'FirefoxAurora\', \'FirefoxNightly\'],\n  });\n};\n```\n\nYou can pass list of browsers as a CLI argument too:\n```bash\nkarma start --browsers Firefox,Chrome\n```\n\n----\n\nFor more information on Karma see the [homepage].\n\n\n[homepage]: http://karma-runner.github.com\n',
+28 silly resolved     readmeFilename: 'README.md',
+28 silly resolved     bugs: { url: 'https://github.com/karma-runner/karma-firefox-launcher/issues' },
+28 silly resolved     _id: 'karma-firefox-launcher@0.1.3',
+28 silly resolved     dist:
+28 silly resolved      { shasum: '88c8a06f55debbe64f8ca4b1f68b0b8a1f3be514',
+28 silly resolved        tarball: 'http://registry.npmjs.org/karma-firefox-launcher/-/karma-firefox-launcher-0.1.3.tgz' },
+28 silly resolved     _from: 'karma-firefox-launcher@*',
+28 silly resolved     _npmVersion: '1.3.11',
+28 silly resolved     _npmUser: { name: 'vojtajina', email: 'vojta.jina@gmail.com' },
+28 silly resolved     maintainers: [ [Object] ],
+28 silly resolved     directories: {},
+28 silly resolved     _shasum: '88c8a06f55debbe64f8ca4b1f68b0b8a1f3be514',
+28 silly resolved     _resolved: 'https://registry.npmjs.org/karma-firefox-launcher/-/karma-firefox-launcher-0.1.3.tgz',
+28 silly resolved     homepage: 'https://github.com/karma-runner/karma-firefox-launcher' } ]
+29 info install karma-firefox-launcher@0.1.3 into /Users/jrunion/pillar
+30 info installOne karma-firefox-launcher@0.1.3
+31 verbose node_modules/karma-firefox-launcher unbuild
+32 info preuninstall karma-firefox-launcher@0.1.3
+33 info uninstall karma-firefox-launcher@0.1.3
+34 verbose true,/Users/jrunion/pillar/node_modules,/Users/jrunion/pillar/node_modules unbuild karma-firefox-launcher@0.1.3
+35 info postuninstall karma-firefox-launcher@0.1.3
+36 verbose gentlyRm vacuuming /Users/jrunion/pillar/node_modules/karma-firefox-launcher
+37 silly gentlyRm purging /Users/jrunion/pillar/node_modules/karma-firefox-launcher
+38 silly gentlyRm quitting because other entries in /Users/jrunion/pillar/node_modules
+39 verbose tar unpack /Users/jrunion/.npm/karma-firefox-launcher/0.1.3/package.tgz
+40 silly lockFile 69fe0077-e-modules-karma-firefox-launcher tar:///Users/jrunion/pillar/node_modules/karma-firefox-launcher
+41 verbose lock tar:///Users/jrunion/pillar/node_modules/karma-firefox-launcher /Users/jrunion/.npm/69fe0077-e-modules-karma-firefox-launcher.lock
+42 silly lockFile 380b8bbd-refox-launcher-0-1-3-package-tgz tar:///Users/jrunion/.npm/karma-firefox-launcher/0.1.3/package.tgz
+43 verbose lock tar:///Users/jrunion/.npm/karma-firefox-launcher/0.1.3/package.tgz /Users/jrunion/.npm/380b8bbd-refox-launcher-0-1-3-package-tgz.lock
+44 verbose gentlyRm vacuuming /Users/jrunion/pillar/node_modules/karma-firefox-launcher
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 silly gunzTarPerm extractEntry package.json
+47 silly gunzTarPerm extractEntry README.md
+48 silly gunzTarPerm extractEntry LICENSE
+49 silly gunzTarPerm extractEntry index.js
+50 silly lockFile 69fe0077-e-modules-karma-firefox-launcher tar:///Users/jrunion/pillar/node_modules/karma-firefox-launcher
+51 silly lockFile 69fe0077-e-modules-karma-firefox-launcher tar:///Users/jrunion/pillar/node_modules/karma-firefox-launcher
+52 silly lockFile 380b8bbd-refox-launcher-0-1-3-package-tgz tar:///Users/jrunion/.npm/karma-firefox-launcher/0.1.3/package.tgz
+53 silly lockFile 380b8bbd-refox-launcher-0-1-3-package-tgz tar:///Users/jrunion/.npm/karma-firefox-launcher/0.1.3/package.tgz
+54 info preinstall karma-firefox-launcher@0.1.3
+55 verbose readDependencies using package.json deps
+56 verbose readDependencies using package.json deps
+57 silly resolved []
+58 verbose about to build /Users/jrunion/pillar/node_modules/karma-firefox-launcher
+59 info build /Users/jrunion/pillar/node_modules/karma-firefox-launcher
+60 verbose linkStuff [ false, false, false, '/Users/jrunion/pillar/node_modules' ]
+61 info linkStuff karma-firefox-launcher@0.1.3
+62 verbose linkBins karma-firefox-launcher@0.1.3
+63 verbose linkMans karma-firefox-launcher@0.1.3
+64 verbose rebuildBundles karma-firefox-launcher@0.1.3
+65 info install karma-firefox-launcher@0.1.3
+66 info postinstall karma-firefox-launcher@0.1.3
+67 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+67 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/glob,
+67 warn unmet dependency which is version 3.1.21
+68 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+68 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/lodash,
+68 warn unmet dependency which is version 0.9.2
+69 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+69 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/lodash,
+69 warn unmet dependency which is version 0.9.2
+70 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+70 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt/node_modules/underscore.string,
+70 warn unmet dependency which is version 2.2.1
+71 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/grunt-contrib-watch/node_modules/gaze requires minimatch@'~0.2.9' but will load
+71 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+71 warn unmet dependency which is version 1.0.0
+72 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/glob requires minimatch@'0.3' but will load
+72 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/minimatch,
+72 warn unmet dependency which is version 0.2.14
+73 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/grunt requires coffee-script@'~1.3.3' but will load
+73 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/coffee-script,
+73 warn unmet dependency which is version 1.7.1
+74 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/grunt requires glob@'~3.1.21' but will load
+74 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/glob,
+74 warn unmet dependency which is version 3.2.11
+75 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/grunt requires lodash@'~0.9.2' but will load
+75 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/lodash,
+75 warn unmet dependency which is version 2.4.1
+76 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/mocha requires glob@'3.2.3' but will load
+76 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma/node_modules/glob,
+76 warn unmet dependency which is version 3.2.11
+77 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma-chrome-launcher/node_modules/grunt requires minimatch@'~0.2.12' but will load
+77 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+77 warn unmet dependency which is version 1.0.0
+78 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/karma-chrome-launcher/node_modules/grunt requires lodash@'~0.9.2' but will load
+78 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/lodash,
+78 warn unmet dependency which is version 2.4.1
+79 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/mocha/node_modules/jade requires commander@'0.6.1' but will load
+79 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/mocha/node_modules/commander,
+79 warn unmet dependency which is version 2.0.0
+80 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/mocha/node_modules/jade requires mkdirp@'0.3.0' but will load
+80 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/mocha/node_modules/mkdirp,
+80 warn unmet dependency which is version 0.3.5
+81 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-karma/node_modules/mocha/node_modules/glob requires minimatch@'~0.2.11' but will load
+81 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+81 warn unmet dependency which is version 1.0.0
+82 warn unmet dependency /Users/jrunion/pillar/node_modules/load-grunt-tasks/node_modules/findup-sync/node_modules/glob requires minimatch@'0.3' but will load
+82 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+82 warn unmet dependency which is version 1.0.0
+83 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+83 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/glob,
+83 warn unmet dependency which is version 3.1.21
+84 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+84 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/lodash,
+84 warn unmet dependency which is version 0.9.2
+85 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+85 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/lodash,
+85 warn unmet dependency which is version 0.9.2
+86 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+86 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt/node_modules/underscore.string,
+86 warn unmet dependency which is version 2.2.1
+87 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt-bump/node_modules/grunt requires minimatch@'~0.2.12' but will load
+87 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+87 warn unmet dependency which is version 1.0.0
+88 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt-contrib-jshint/node_modules/jshint requires minimatch@'0.x.x' but will load
+88 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+88 warn unmet dependency which is version 1.0.0
+89 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/grunt-karma/node_modules/karma requires minimatch@'~0.2' but will load
+89 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+89 warn unmet dependency which is version 1.0.0
+90 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma/node_modules/http-proxy requires colors@'0.x.x' but will load
+90 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma/node_modules/colors,
+90 warn unmet dependency which is version 0.6.0-1
+91 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma/node_modules/http-proxy requires optimist@'0.6.x' but will load
+91 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma/node_modules/optimist,
+91 warn unmet dependency which is version 0.3.7
+92 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma-html2js-preprocessor/node_modules/grunt requires minimatch@'~0.2.12' but will load
+92 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+92 warn unmet dependency which is version 1.0.0
+93 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma-phantomjs-launcher/node_modules/phantomjs requires npmconf@'2.0.9' but will load
+93 warn unmet dependency /Users/jrunion/pillar/node_modules/npmconf,
+93 warn unmet dependency which is version 2.1.0
+94 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma-requirejs/node_modules/grunt requires minimatch@'~0.2.12' but will load
+94 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+94 warn unmet dependency which is version 1.0.0
+95 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma-requirejs/node_modules/grunt-karma requires karma@'~0.8.0' but will load
+95 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-jasmine/node_modules/karma,
+95 warn unmet dependency which is version 0.9.8
+96 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt requires async@'~0.1.22' but will load
+96 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/async,
+96 warn unmet dependency which is version 0.2.10
+97 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt requires minimatch@'~0.2.12' but will load
+97 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+97 warn unmet dependency which is version 1.0.0
+98 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-cli/node_modules/grunt requires rimraf@'~2.2.8' but will load
+98 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/rimraf,
+98 warn unmet dependency which is version 2.2.6
+99 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/grunt-contrib-jshint/node_modules/jshint requires minimatch@'0.x.x' but will load
+99 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+99 warn unmet dependency which is version 1.0.0
+100 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/mock-fs/node_modules/glob requires minimatch@'0.3' but will load
+100 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+100 warn unmet dependency which is version 1.0.0
+101 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/mock-fs/node_modules/jshint requires minimatch@'0.x.x' but will load
+101 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+101 warn unmet dependency which is version 1.0.0
+102 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/mock-fs/node_modules/mocha requires glob@'3.2.3' but will load
+102 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-newer/node_modules/mock-fs/node_modules/glob,
+102 warn unmet dependency which is version 3.2.11
+103 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+103 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/glob,
+103 warn unmet dependency which is version 3.1.21
+104 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+104 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/lodash,
+104 warn unmet dependency which is version 0.9.2
+105 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+105 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/lodash,
+105 warn unmet dependency which is version 0.9.2
+106 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+106 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt/node_modules/underscore.string,
+106 warn unmet dependency which is version 2.2.1
+107 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-jscs/node_modules/jscs requires minimatch@'~0.4.0' but will load
+107 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+107 warn unmet dependency which is version 1.0.0
+108 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-mocha-cli/node_modules/mocha requires mkdirp@'0.3.5' but will load
+108 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/mkdirp,
+108 warn unmet dependency which is version 0.5.0
+109 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-mocha-cli/node_modules/coffee-script requires mkdirp@'~0.3.5' but will load
+109 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/mkdirp,
+109 warn unmet dependency which is version 0.5.0
+110 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-mocha-cli/node_modules/grunt requires coffee-script@'~1.3.3' but will load
+110 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-mocha-cli/node_modules/coffee-script,
+110 warn unmet dependency which is version 1.7.1
+111 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-mocha-cli/node_modules/grunt requires minimatch@'~0.2.12' but will load
+111 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+111 warn unmet dependency which is version 1.0.0
+112 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/grunt-mocha-cli/node_modules/grunt requires lodash@'~0.9.2' but will load
+112 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-usemin/node_modules/lodash,
+112 warn unmet dependency which is version 2.4.1
+113 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+113 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/glob,
+113 warn unmet dependency which is version 3.1.21
+114 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+114 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/lodash,
+114 warn unmet dependency which is version 0.9.2
+115 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+115 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/lodash,
+115 warn unmet dependency which is version 0.9.2
+116 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+116 warn unmet dependency /Users/jrunion/pillar/node_modules/karma-phantomjs-launcher/node_modules/grunt/node_modules/underscore.string,
+116 warn unmet dependency which is version 2.2.1
+117 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/node_modules/glob requires minimatch@'0.3' but will load
+117 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/minimatch,
+117 warn unmet dependency which is version 1.0.0
+118 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt/node_modules/findup-sync/node_modules/glob requires minimatch@'0.3' but will load
+118 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt/node_modules/minimatch,
+118 warn unmet dependency which is version 0.2.14
+119 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt/node_modules/js-yaml/node_modules/argparse requires underscore.string@'~2.3.1' but will load
+119 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt/node_modules/underscore.string,
+119 warn unmet dependency which is version 2.2.1
+120 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt/node_modules/grunt-contrib-jshint/node_modules/jshint requires shelljs@'0.1.x' but will load
+120 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt/node_modules/shelljs,
+120 warn unmet dependency which is version 0.2.6
+121 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-jshint/node_modules/grunt-contrib-internal/node_modules/read-package-json/node_modules/glob requires minimatch@'0.3' but will load
+121 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+121 warn unmet dependency which is version 1.0.0
+122 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/bower-config requires mout@'~0.9.0' but will load
+122 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout,
+122 warn unmet dependency which is version 0.10.0
+123 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/bower-registry-client requires graceful-fs@'~2.0.0' but will load
+123 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/graceful-fs,
+123 warn unmet dependency which is version 3.0.2
+124 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/bower-registry-client requires lru-cache@'~2.3.0' but will load
+124 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/lru-cache,
+124 warn unmet dependency which is version 2.5.0
+125 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/bower-registry-client requires request@'~2.27.0' but will load
+125 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/request,
+125 warn unmet dependency which is version 2.42.0
+126 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/bower-registry-client requires mkdirp@'~0.3.5' but will load
+126 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mkdirp,
+126 warn unmet dependency which is version 0.5.0
+127 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/decompress-zip requires nopt@'~2.2.0' but will load
+127 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/nopt,
+127 warn unmet dependency which is version 3.0.1
+128 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/insight requires inquirer@'^0.6.0' but will load
+128 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/inquirer,
+128 warn unmet dependency which is version 0.7.3
+129 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/p-throttler requires q@'~0.9.2' but will load
+129 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/bower/node_modules/q,
+129 warn unmet dependency which is version 1.0.1
+130 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/google-cdn/node_modules/cdnjs-cdn-data requires semver@'~2.2.1' but will load
+130 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/google-cdn/node_modules/semver,
+130 warn unmet dependency which is version 2.3.2
+131 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+131 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/glob,
+131 warn unmet dependency which is version 3.1.21
+132 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+132 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/lodash,
+132 warn unmet dependency which is version 0.9.2
+133 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+133 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/lodash,
+133 warn unmet dependency which is version 0.9.2
+134 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+134 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt/node_modules/underscore.string,
+134 warn unmet dependency which is version 2.2.1
+135 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-google-cdn/node_modules/grunt-contrib-jshint/node_modules/jshint requires minimatch@'0.x.x' but will load
+135 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+135 warn unmet dependency which is version 1.0.0
+136 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt/node_modules/findup-sync/node_modules/glob requires minimatch@'0.3' but will load
+136 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt/node_modules/minimatch,
+136 warn unmet dependency which is version 0.2.14
+137 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt/node_modules/js-yaml/node_modules/argparse requires underscore.string@'~2.3.1' but will load
+137 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt/node_modules/underscore.string,
+137 warn unmet dependency which is version 2.2.1
+138 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt/node_modules/grunt-contrib-jshint/node_modules/jshint requires shelljs@'0.1.x' but will load
+138 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt/node_modules/shelljs,
+138 warn unmet dependency which is version 0.2.6
+139 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/read-package-json/node_modules/glob requires minimatch@'0.3' but will load
+139 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+139 warn unmet dependency which is version 1.0.0
+140 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+140 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/glob,
+140 warn unmet dependency which is version 3.1.21
+141 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+141 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/lodash,
+141 warn unmet dependency which is version 0.9.2
+142 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+142 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/lodash,
+142 warn unmet dependency which is version 0.9.2
+143 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+143 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt/node_modules/underscore.string,
+143 warn unmet dependency which is version 2.2.1
+144 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-watch/node_modules/grunt-contrib-internal/node_modules/grunt-contrib-jshint/node_modules/jshint requires minimatch@'0.x.x' but will load
+144 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+144 warn unmet dependency which is version 1.0.0
+145 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-htmlmin/node_modules/html-minifier/node_modules/cli/node_modules/glob requires minimatch@'0.3' but will load
+145 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+145 warn unmet dependency which is version 1.0.0
+146 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt/node_modules/findup-sync/node_modules/glob requires minimatch@'0.3' but will load
+146 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt/node_modules/minimatch,
+146 warn unmet dependency which is version 0.2.14
+147 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt/node_modules/js-yaml/node_modules/argparse requires underscore.string@'~2.3.1' but will load
+147 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt/node_modules/underscore.string,
+147 warn unmet dependency which is version 2.2.1
+148 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-internal/node_modules/read-package-json/node_modules/glob requires minimatch@'0.3' but will load
+148 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+148 warn unmet dependency which is version 1.0.0
+149 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/findup-sync requires glob@'~3.2.9' but will load
+149 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/glob,
+149 warn unmet dependency which is version 3.1.21
+150 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+150 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/lodash,
+150 warn unmet dependency which is version 0.9.2
+151 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/grunt-legacy-log requires lodash@'~2.4.1' but will load
+151 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/lodash,
+151 warn unmet dependency which is version 0.9.2
+152 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/grunt-legacy-log requires underscore.string@'~2.3.3' but will load
+152 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/grunt/node_modules/underscore.string,
+152 warn unmet dependency which is version 2.2.1
+153 warn unmet dependency /Users/jrunion/pillar/node_modules/grunt-contrib-imagemin/node_modules/grunt-contrib-nodeunit/node_modules/tap/node_modules/glob requires minimatch@'0.3' but will load
+153 warn unmet dependency /Users/jrunion/pillar/node_modules/minimatch,
+153 warn unmet dependency which is version 1.0.0
+154 verbose stack Error: The package karma does not satisfy its siblings' peerDependencies requirements!
+154 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:98:32
+154 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:202:5
+154 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+154 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+154 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+154 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+154 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+154 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+154 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+154 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+155 verbose cwd /Users/jrunion/pillar
+156 error Darwin 13.3.0
+157 error argv "node" "/usr/local/bin/npm" "install" "karma-firefox-launcher"
+158 error node v0.10.30
+159 error npm  v2.0.0
+160 error code EPEERINVALID
+161 error peerinvalid The package karma does not satisfy its siblings' peerDependencies requirements!
+161 error peerinvalid Peer karma-chrome-launcher@0.1.4 wants karma@>=0.9.3
+161 error peerinvalid Peer karma-firefox-launcher@0.1.3 wants karma@>=0.9
+161 error peerinvalid Peer karma-jasmine@0.2.2 wants karma@>=0.9
+161 error peerinvalid Peer karma-script-launcher@0.1.0 wants karma@>=0.9
+161 error peerinvalid Peer karma-coffee-preprocessor@0.2.1 wants karma@>=0.11.14
+161 error peerinvalid Peer karma-html2js-preprocessor@0.1.0 wants karma@>=0.9
+161 error peerinvalid Peer karma-phantomjs-launcher@0.1.4 wants karma@>=0.9
+161 error peerinvalid Peer karma-requirejs@0.2.2 wants karma@>=0.9
+162 verbose exit [ 1, true ]
