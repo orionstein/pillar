@@ -10,6 +10,25 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 // *** ------[ POSITION MIXINS ] ------ *** //
 
+@mixin trim {
+  margin: 3% 0 3% 0;
+  padding: 0 5% 0 5%;
+}
+
+@mixin dark-shade {
+    background-color: #343434;
+//    background-image: -webkit-linear-gradient(top, #343434, #212121);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(233, 233, 233, 0.57));
+    border: 1px solid rgba(98, 98, 98, 0.75);
+    position: relative;
+    @include color-carbon;
+    @include light-text;
+    @include brand-font;
+    input {
+      @include color-rust;
+    }
+}
+
 @mixin tag {
   border: 1px solid rgba(222, 222, 222, 0.17);
   margin-left: -1px;
@@ -326,6 +345,11 @@ $color-brand: #5cb85c;
   transition: left 0.6s ease-in;
 }
 
+@mixin right-in {
+  -webkit-transition: right 0.6s ease-in;
+  transition: right 0.6s ease-in;
+}
+
 @mixin flip {
   -webkit-perspective: 300px;
   -ms-perspective: 300px;
@@ -491,24 +515,25 @@ a {
   }
 }
 
-.shade-form {
+.dark-form {
   margin: 0;
-  background: rgba(0, 0, 0, 0.5);
+//  background: rgba(0, 0, 0, 0.5);
   label {
     @include brand-font
   }
   input {
     background: rgba(0, 0, 0, 0.65);
     border: 1px solid rgba(0, 0, 0, 0.75);
-    font-weight: 600;
+    font-weight: 300;
     text-transform: uppercase;
     position: relative;
-    border-radius: 0 0 0 5px;
+    border-radius: 0 0 .5em .5em;
     width: 65%;
-    font-size: 18px;
-    @include color-chrome;
+    font-size: 24px;
+    color: #87D787;
+    top: -4px;
     @include light-text;
-    @include brand-font
+    @include brand-font;
   }
   button {
     background-color: #55b55c;
@@ -629,19 +654,6 @@ a {
         }
       }
     }
-    &.pillar-fixed-footer {
-      /*      width: 50%;
-            background-color: rgba(53, 53, 53, 0.83);
-            bottom: 0;
-            position: absolute;
-            left: 5%;
-            height: 73%;
-            width: 90%;
-            border: 1px solid rgba(0, 0, 0, .15);
-            border-bottom: none;
-            border-radius: 8px 8px 0 0;
-            cursor: pointer;*/
-    }
   }
 }
 
@@ -737,6 +749,10 @@ a {
   @include back-action
 }
 
+.bg-rust {
+  @include back-rust
+}
+
 .bg-chrome-dark {
   @include back-chrome-dark
 }
@@ -787,6 +803,13 @@ a {
 
 .text-dark {
   @include dark-text
+}
+
+
+.edge { @include trim }
+
+.dark-edge {
+  @include dark-shade
 }
 
 
